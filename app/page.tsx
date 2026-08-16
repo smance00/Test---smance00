@@ -343,17 +343,6 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="final">
-            <div className="container">
-              <h2 className="reveal">See your hiring, clearly.</h2>
-              <p className="fsub reveal">
-                Book a walkthrough and we&apos;ll show you the intelligence hiding in your existing ATS.
-              </p>
-              <a className="textlink fl reveal" href={DEMO_MAIL}>
-                Book a demo <ArrowIcon />
-              </a>
-            </div>
-          </section>
         </main>
       </div>
       <SiteFooter variant="home" />
