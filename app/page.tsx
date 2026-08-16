@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
-import { CyclingWord } from "@/components/CyclingWord";
+import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
+import { AskLevy } from "@/components/AskLevy";
 import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
 import { SiteFooter } from "@/components/SiteFooter";
-import { posts } from "@/lib/posts";
 import { DEMO_MAIL } from "@/lib/utils";
 
 function ArrowIcon() {
@@ -45,21 +45,19 @@ export default function HomePage() {
     <div className="min-h-dvh bg-bg text-fg">
       <EditorialFx />
       <div className="edh">
+        <a className="announce" href="#request-demo">
+          <span className="announce-new">New</span>
+          <span className="announce-copy">
+            Introducing your AI Hiring Advisor
+            <ArrowIcon />
+          </span>
+        </a>
         <header className="nav">
           <div className="container nav-in">
             <Link className="logo" aria-label="Olevy home" href="/">
               <BrandMark height={22} />
             </Link>
             <div className="nav-right">
-              <nav className="nav-links" aria-label="Primary">
-                <a href="/#connect">Product</a>
-                <a href="/#who">Who it&apos;s for</a>
-                <a href="/#learn">Intelligence</a>
-                <Link href="/blog">Blog</Link>
-              </nav>
-              <Link className="signin" href="/login">
-                Sign in
-              </Link>
               <a className="nav-demo" href={DEMO_MAIL}>
                 Book a demo
               </a>
@@ -70,44 +68,48 @@ export default function HomePage() {
 
         <main>
           <section className="hero">
+            <div className="container hero-split">
+              <div className="hero-copy">
+                <p className="eyebrow reveal">Your AI Hiring Advisor</p>
+                <h1 className="reveal">Make your next hire, the right hire.</h1>
+                <p className="hero-sub prose reveal">
+                  Olevy connects to the systems you already run via ATS and HRIS systems to predict hiring success.
+                </p>
+              </div>
+              <DemoRequestForm />
+            </div>
+          </section>
+
+          <section className="hero-video" aria-label="Product walkthrough">
             <div className="container">
-              <p className="eyebrow reveal">Operational Intelligence Layer</p>
-              <h1 className="reveal">
-                The intelligence layer for the hiring you <span className="limeword" id="lime">already do</span>.
-              </h1>
-              <p className="hero-line2 reveal">
-                for teams that hire <CyclingWord />
-              </p>
-              <p className="hero-sub prose reveal">
-                Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next. See where hiring slows, learn which signals predict great hires, and coach every manager with data, not opinions.
-              </p>
-              <div className="hero-cta reveal">
-                <a className="textlink" href={DEMO_MAIL}>
-                  Book a demo <ArrowIcon />
-                </a>
-                <a className="textlink quiet" href="#detect">
-                  See how it works
-                </a>
+              <div className="hero-video-frame reveal">
+                <iframe
+                  src="https://drive.google.com/file/d/1TwQzwMjdsJ8zWUOWZq10Gv9sRknfmTPi/preview"
+                  title="Olevy product walkthrough"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
             </div>
           </section>
 
-          <section className="sec" id="connect" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
+          <section className="sec" id="overview" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
             <div className="container">
               <div className="erow-grid reveal">
                 <div className="eg-copy">
-                  <span className="idx">01 · Connect</span>
-                  <h3>Start from the data you already have.</h3>
+                  <a className="platform-pill" href="#overview">
+                    Platform Overview <ArrowIcon />
+                  </a>
+                  <h3>
+                    Turn <span className="people-word">people decisions</span> into{" "}
+                    <span className="limeword swipe" id="lime">business strategy</span>
+                  </h3>
                   <p>
-                    Olevy plugs into your existing ATS and enterprise systems and activates the data already sitting there — no migration, no cold start.
+                    Olevy connects hiring behavior, interview signals, and workforce outcomes to reveal what drives stronger hires. Give HR and hiring leaders the intelligence to improve decision quality, uncover hidden friction, and turn hiring into a measurable business lever.
                   </p>
-                  <div className="chips" style={{ marginTop: 18 }}>
-                    <span className="chip">Interview scorecards</span>
-                    <span className="chip">Hiring-manager feedback</span>
-                    <span className="chip">Performance reviews</span>
-                    <span className="chip">Candidate profiles</span>
-                    <span className="chip">Applications &amp; pipeline events</span>
-                  </div>
+                  <a className="textlink" href="#detect" style={{ marginTop: 22 }}>
+                    Learn More
+                  </a>
                 </div>
                 <WindowChrome url="olevy.app — Connections">
                   <div className="cx">
@@ -143,7 +145,7 @@ export default function HomePage() {
                         </svg>
                       </div>
                       <div className="hn">Olevy</div>
-                      <div className="hs">Operational intelligence layer</div>
+                      <div className="hs">Your AI Hiring Advisor</div>
                     </div>
                   </div>
                   <div className="flowchips">
@@ -255,6 +257,22 @@ export default function HomePage() {
               <p className="sec-intro reveal">
                 Then it delivers real-time behavioral coaching widgets: non-punitive, data-backed guidance, directly to hiring managers.
               </p>
+              <div className="advisor-band reveal">
+                <a className="platform-pill" href="#ask-levy">
+                  AI Advisor <ArrowIcon />
+                </a>
+                <h2>
+                  Learn from outcomes and <span className="people-word">reduce risk</span> with your personal{" "}
+                  <span className="limeword swipe">AI Advisor</span>
+                </h2>
+                <p>
+                  Surface patterns across interviews, manager behavior, and hiring outcomes to understand where risk is forming and what consistently leads to stronger hires. Use those insights to refine the process and improve the decisions that follow.
+                </p>
+                <a className="textlink advisor-cta" href="#ask-levy">
+                  Meet the advisor <ArrowIcon />
+                </a>
+                <AskLevy />
+              </div>
               <div className="reveal">
                 <IntelligenceExplorer />
               </div>
@@ -263,27 +281,7 @@ export default function HomePage() {
 
           <section className="sec" style={{ paddingTop: 0 }}>
             <div className="container">
-              <p className="sec-eyebrow reveal">In practice</p>
-              <h2 className="reveal">Coaching, the moment it matters.</h2>
-              <div style={{ marginTop: "clamp(28px,4vw,44px)" }}>
-                <div className="pstep reveal">
-                  <span className="pn">01</span>
-                  <p>
-                    A hiring manager routinely rates Ivy League or ex-FAANG candidates higher in first-round resume reviews — and scores state-school or non-traditional candidates lower.
-                  </p>
-                </div>
-                <div className="pstep reveal">
-                  <span className="pn">02</span>
-                  <p>
-                    Olevy looks at 3 years of your HRIS data and finds the state-school developers on this team actually stay 40% longer, with identical performance-review scores.
-                  </p>
-                </div>
-                <div className="pstep reveal">
-                  <span className="pn">03</span>
-                  <p>The next time that manager opens a pipeline, Olevy surfaces a personalized insight widget.</p>
-                </div>
-              </div>
-              <div className="insight reveal">
+              <div className="insight reveal" style={{ marginTop: 0 }}>
                 <span className="il">
                   <i />
                   Data insight
@@ -345,36 +343,6 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" id="who" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <p className="sec-eyebrow reveal">Who it&apos;s for</p>
-              <h2 className="reveal">Built for everyone who owns an outcome in hiring.</h2>
-              <div style={{ marginTop: "clamp(30px,4vw,52px)" }}>
-                <div className="erow reveal">
-                  <span className="enum">01</span>
-                  <div className="erow-body">
-                    <h3>Founders &amp; hiring managers</h3>
-                    <p>Make sharper calls without standing up a full recruiting org.</p>
-                  </div>
-                </div>
-                <div className="erow reveal">
-                  <span className="enum">02</span>
-                  <div className="erow-body">
-                    <h3>Talent &amp; recruiting teams</h3>
-                    <p>Run the whole pipeline on data you already own.</p>
-                  </div>
-                </div>
-                <div className="erow reveal">
-                  <span className="enum">03</span>
-                  <div className="erow-body">
-                    <h3>People &amp; ops leaders</h3>
-                    <p>See exactly where hiring slows down, and why.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
           <section className="sec" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
             <div className="container">
               <div className="stats reveal">
@@ -406,40 +374,6 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <p className="sec-eyebrow reveal">From the blog</p>
-              <h2 className="reveal">Insights on hiring intelligence.</h2>
-              <div className="blog-list reveal" style={{ marginTop: "clamp(30px,4vw,52px)" }}>
-                {posts.map((post) => (
-                  <Link className="blogrow" href={`/blog/${post.slug}`} key={post.slug}>
-                    <span className="bdate">{post.dateLabel}</span>
-                    <div>
-                      <p className="bcat">{post.category}</p>
-                      <h3>{post.title}</h3>
-                      <p className="bexc">{post.excerpt}</p>
-                      <p className="bmeta">{post.minutes} min read</p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-              <Link className="textlink reveal" href="/blog" style={{ marginTop: "clamp(28px,3.5vw,40px)" }}>
-                Read the blog <ArrowIcon />
-              </Link>
-            </div>
-          </section>
-
-          <section className="final">
-            <div className="container">
-              <h2 className="reveal">See your hiring, clearly.</h2>
-              <p className="fsub reveal">
-                Book a walkthrough and we&apos;ll show you the intelligence hiding in your existing ATS.
-              </p>
-              <a className="textlink fl reveal" href={DEMO_MAIL}>
-                Book a demo <ArrowIcon />
-              </a>
-            </div>
-          </section>
         </main>
       </div>
       <SiteFooter variant="home" />
