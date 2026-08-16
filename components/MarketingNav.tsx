@@ -16,22 +16,10 @@ export function MarketingNav() {
             <Link className="transition-colors hover:text-fg" href="/">
               Home
             </Link>
-            <Link className="transition-colors hover:text-fg" href="/#detect">
-              How we help
-            </Link>
-            <Link className="transition-colors hover:text-fg" href="/blog">
-              Blog
-            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <Link
-            className="hidden text-sm font-medium text-muted transition-colors hover:text-fg sm:inline"
-            href="/login"
-          >
-            Sign in
-          </Link>
           <a className="btn-primary" href={DEMO_MAIL}>
             <Calendar className="h-4 w-4" /> Book a Consultation
           </a>

@@ -5,7 +5,6 @@ import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
 import { SiteFooter } from "@/components/SiteFooter";
-import { posts } from "@/lib/posts";
 import { DEMO_MAIL } from "@/lib/utils";
 
 function ArrowIcon() {
@@ -51,15 +50,6 @@ export default function HomePage() {
               <BrandMark height={22} />
             </Link>
             <div className="nav-right">
-              <nav className="nav-links" aria-label="Primary">
-                <a href="/#connect">Product</a>
-                <a href="/#who">Who it&apos;s for</a>
-                <a href="/#learn">Intelligence</a>
-                <Link href="/blog">Blog</Link>
-              </nav>
-              <Link className="signin" href="/login">
-                Sign in
-              </Link>
               <a className="nav-demo" href={DEMO_MAIL}>
                 Book a demo
               </a>
@@ -84,9 +74,6 @@ export default function HomePage() {
               <div className="hero-cta reveal">
                 <a className="textlink" href={DEMO_MAIL}>
                   Book a demo <ArrowIcon />
-                </a>
-                <a className="textlink quiet" href="#detect">
-                  See how it works
                 </a>
               </div>
             </div>
@@ -263,27 +250,7 @@ export default function HomePage() {
 
           <section className="sec" style={{ paddingTop: 0 }}>
             <div className="container">
-              <p className="sec-eyebrow reveal">In practice</p>
-              <h2 className="reveal">Coaching, the moment it matters.</h2>
-              <div style={{ marginTop: "clamp(28px,4vw,44px)" }}>
-                <div className="pstep reveal">
-                  <span className="pn">01</span>
-                  <p>
-                    A hiring manager routinely rates Ivy League or ex-FAANG candidates higher in first-round resume reviews — and scores state-school or non-traditional candidates lower.
-                  </p>
-                </div>
-                <div className="pstep reveal">
-                  <span className="pn">02</span>
-                  <p>
-                    Olevy looks at 3 years of your HRIS data and finds the state-school developers on this team actually stay 40% longer, with identical performance-review scores.
-                  </p>
-                </div>
-                <div className="pstep reveal">
-                  <span className="pn">03</span>
-                  <p>The next time that manager opens a pipeline, Olevy surfaces a personalized insight widget.</p>
-                </div>
-              </div>
-              <div className="insight reveal">
+              <div className="insight reveal" style={{ marginTop: 0 }}>
                 <span className="il">
                   <i />
                   Data insight
@@ -345,36 +312,6 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" id="who" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <p className="sec-eyebrow reveal">Who it&apos;s for</p>
-              <h2 className="reveal">Built for everyone who owns an outcome in hiring.</h2>
-              <div style={{ marginTop: "clamp(30px,4vw,52px)" }}>
-                <div className="erow reveal">
-                  <span className="enum">01</span>
-                  <div className="erow-body">
-                    <h3>Founders &amp; hiring managers</h3>
-                    <p>Make sharper calls without standing up a full recruiting org.</p>
-                  </div>
-                </div>
-                <div className="erow reveal">
-                  <span className="enum">02</span>
-                  <div className="erow-body">
-                    <h3>Talent &amp; recruiting teams</h3>
-                    <p>Run the whole pipeline on data you already own.</p>
-                  </div>
-                </div>
-                <div className="erow reveal">
-                  <span className="enum">03</span>
-                  <div className="erow-body">
-                    <h3>People &amp; ops leaders</h3>
-                    <p>See exactly where hiring slows down, and why.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
           <section className="sec" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
             <div className="container">
               <div className="stats reveal">
@@ -403,29 +340,6 @@ export default function HomePage() {
                   <div className="l">fit signals per candidate</div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section className="sec" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <p className="sec-eyebrow reveal">From the blog</p>
-              <h2 className="reveal">Insights on hiring intelligence.</h2>
-              <div className="blog-list reveal" style={{ marginTop: "clamp(30px,4vw,52px)" }}>
-                {posts.map((post) => (
-                  <Link className="blogrow" href={`/blog/${post.slug}`} key={post.slug}>
-                    <span className="bdate">{post.dateLabel}</span>
-                    <div>
-                      <p className="bcat">{post.category}</p>
-                      <h3>{post.title}</h3>
-                      <p className="bexc">{post.excerpt}</p>
-                      <p className="bmeta">{post.minutes} min read</p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-              <Link className="textlink reveal" href="/blog" style={{ marginTop: "clamp(28px,3.5vw,40px)" }}>
-                Read the blog <ArrowIcon />
-              </Link>
             </div>
           </section>
 
