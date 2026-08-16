@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
-import { CyclingWord } from "@/components/CyclingWord";
+import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
@@ -44,6 +44,13 @@ export default function HomePage() {
     <div className="min-h-dvh bg-bg text-fg">
       <EditorialFx />
       <div className="edh">
+        <a className="announce" href="#request-demo">
+          <span className="announce-new">New</span>
+          <span className="announce-copy">
+            Introducing your AI Hiring Advisor
+            <ArrowIcon />
+          </span>
+        </a>
         <header className="nav">
           <div className="container nav-in">
             <Link className="logo" aria-label="Olevy home" href="/">
@@ -60,21 +67,27 @@ export default function HomePage() {
 
         <main>
           <section className="hero">
+            <div className="container hero-split">
+              <div className="hero-copy">
+                <p className="eyebrow reveal">Operational Intelligence Layer</p>
+                <h1 className="reveal">Make your next hire, the right hire.</h1>
+                <p className="hero-sub prose reveal">
+                  Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next.
+                </p>
+              </div>
+              <DemoRequestForm />
+            </div>
+          </section>
+
+          <section className="hero-video" aria-label="Product walkthrough">
             <div className="container">
-              <p className="eyebrow reveal">Operational Intelligence Layer</p>
-              <h1 className="reveal">
-                The intelligence layer for the hiring you <span className="limeword" id="lime">already do</span>.
-              </h1>
-              <p className="hero-line2 reveal">
-                for teams that hire <CyclingWord />
-              </p>
-              <p className="hero-sub prose reveal">
-                Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next. See where hiring slows, learn which signals predict great hires, and coach every manager with data, not opinions.
-              </p>
-              <div className="hero-cta reveal">
-                <a className="textlink" href={DEMO_MAIL}>
-                  Book a demo <ArrowIcon />
-                </a>
+              <div className="hero-video-frame reveal">
+                <iframe
+                  src="https://drive.google.com/file/d/1TwQzwMjdsJ8zWUOWZq10Gv9sRknfmTPi/preview"
+                  title="Olevy product walkthrough"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
             </div>
           </section>
