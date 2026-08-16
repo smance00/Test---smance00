@@ -3,6 +3,7 @@ import { BrandMark } from "@/components/BrandMark";
 import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
+import { AskLevy } from "@/components/AskLevy";
 import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DEMO_MAIL } from "@/lib/utils";
@@ -256,6 +257,22 @@ export default function HomePage() {
               <p className="sec-intro reveal">
                 Then it delivers real-time behavioral coaching widgets: non-punitive, data-backed guidance, directly to hiring managers.
               </p>
+              <div className="advisor-band reveal">
+                <a className="platform-pill" href="#ask-levy">
+                  AI Advisor <ArrowIcon />
+                </a>
+                <h2>
+                  Learn from outcomes and <span className="people-word">reduce risk</span> with your personal{" "}
+                  <span className="limeword swipe">AI Advisor</span>
+                </h2>
+                <p>
+                  Surface patterns across interviews, manager behavior, and hiring outcomes to understand where risk is forming and what consistently leads to stronger hires. Use those insights to refine the process and improve the decisions that follow.
+                </p>
+                <a className="textlink advisor-cta" href="#ask-levy">
+                  Meet the advisor <ArrowIcon />
+                </a>
+                <AskLevy />
+              </div>
               <div className="reveal">
                 <IntelligenceExplorer />
               </div>

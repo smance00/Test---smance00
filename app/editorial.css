@@ -698,6 +698,165 @@
 .edh .people-word {
   color: var(--violet);
 }
+
+.edh .advisor-band {
+  margin-top: clamp(40px, 5vw, 64px);
+  padding: clamp(40px, 6vw, 72px) clamp(20px, 4vw, 48px);
+  background: #f0e8ff;
+  border-radius: 24px;
+  text-align: center;
+}
+.dark .edh .advisor-band {
+  background: rgba(139, 123, 255, 0.12);
+}
+.edh .advisor-band h2 {
+  max-width: 22ch;
+  margin: 18px auto 0;
+  font-size: clamp(28px, 3.8vw, 48px);
+}
+.edh .advisor-band p {
+  margin: 18px auto 0;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: clamp(16px, 1.4vw, 18px);
+}
+.edh .advisor-cta {
+  margin: 26px auto 0;
+}
+
+.edh .levy-chat {
+  margin: clamp(32px, 4vw, 48px) auto 0;
+  max-width: 640px;
+  text-align: left;
+  background: #f7f2ff;
+  border: 1px solid color-mix(in srgb, var(--violet) 28%, var(--border));
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 46px -22px rgba(76, 31, 215, 0.28);
+}
+.dark .edh .levy-chat {
+  background: #171428;
+}
+.edh .levy-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 18px;
+  border-bottom: 1px solid color-mix(in srgb, var(--violet) 18%, var(--border));
+  font-family: "Inter Tight", sans-serif;
+  font-size: 16px;
+}
+.edh .levy-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  color: var(--ink);
+}
+.edh .levy-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.edh .levy-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 18px 8px;
+  max-height: 420px;
+  overflow-y: auto;
+  background: #efe7ff;
+}
+.dark .edh .levy-thread {
+  background: #1b1730;
+}
+.edh .levy-msg {
+  max-width: 92%;
+}
+.edh .levy-msg.you {
+  align-self: flex-end;
+}
+.edh .levy-msg.levy {
+  align-self: flex-start;
+}
+.edh .levy-who {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.edh .levy-msg.you .levy-who {
+  text-align: right;
+}
+.edh .levy-msg p {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 14.5px;
+  line-height: 1.55;
+  text-align: left;
+  max-width: none;
+}
+.dark .edh .levy-msg p {
+  background: #241f38;
+}
+.edh .levy-msg p + p {
+  margin-top: 8px;
+}
+.edh .levy-compose {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px 16px;
+  background: #f7f2ff;
+}
+.dark .edh .levy-compose {
+  background: #171428;
+}
+.edh .levy-compose input {
+  flex: 1;
+  border: 0;
+  border-radius: 999px;
+  background: #e7dcff;
+  color: var(--ink);
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.dark .edh .levy-compose input {
+  background: #2a2444;
+}
+.edh .levy-send {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.edh .levy-send svg {
+  width: 16px;
+  height: 16px;
+}
+.edh .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .edh .eg-copy h3 {
   font-size: clamp(21px, 2.4vw, 30px);
   font-weight: 600;
