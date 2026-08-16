@@ -69,10 +69,10 @@ export default function HomePage() {
           <section className="hero">
             <div className="container hero-split">
               <div className="hero-copy">
-                <p className="eyebrow reveal">Operational Intelligence Layer</p>
+                <p className="eyebrow reveal">Your AI Hiring Advisor</p>
                 <h1 className="reveal">Make your next hire, the right hire.</h1>
                 <p className="hero-sub prose reveal">
-                  Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next.
+                  Olevy connects to the systems you already run via ATS and HRIS systems to predict hiring success.
                 </p>
               </div>
               <DemoRequestForm />
@@ -92,22 +92,23 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" id="connect" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
+          <section className="sec" id="overview" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
             <div className="container">
               <div className="erow-grid reveal">
                 <div className="eg-copy">
-                  <span className="idx">01 · Connect</span>
-                  <h3>Start from the data you already have.</h3>
+                  <a className="platform-pill" href="#overview">
+                    Platform Overview <ArrowIcon />
+                  </a>
+                  <h3>
+                    Turn <span className="people-word">people decisions</span> into{" "}
+                    <span className="limeword swipe" id="lime">business strategy</span>
+                  </h3>
                   <p>
-                    Olevy plugs into your existing ATS and enterprise systems and activates the data already sitting there — no migration, no cold start.
+                    Olevy connects hiring behavior, interview signals, and workforce outcomes to reveal what drives stronger hires. Give HR and hiring leaders the intelligence to improve decision quality, uncover hidden friction, and turn hiring into a measurable business lever.
                   </p>
-                  <div className="chips" style={{ marginTop: 18 }}>
-                    <span className="chip">Interview scorecards</span>
-                    <span className="chip">Hiring-manager feedback</span>
-                    <span className="chip">Performance reviews</span>
-                    <span className="chip">Candidate profiles</span>
-                    <span className="chip">Applications &amp; pipeline events</span>
-                  </div>
+                  <a className="textlink" href="#detect" style={{ marginTop: 22 }}>
+                    Learn More
+                  </a>
                 </div>
                 <WindowChrome url="olevy.app — Connections">
                   <div className="cx">
@@ -143,7 +144,7 @@ export default function HomePage() {
                         </svg>
                       </div>
                       <div className="hn">Olevy</div>
-                      <div className="hs">Operational intelligence layer</div>
+                      <div className="hs">Your AI Hiring Advisor</div>
                     </div>
                   </div>
                   <div className="flowchips">

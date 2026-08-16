@@ -676,6 +676,28 @@
   color: var(--violet);
   letter-spacing: 0.02em;
 }
+.edh .platform-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--violet);
+  background: var(--violet-bg);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+.edh a.platform-pill:hover {
+  color: var(--violet-deep);
+}
+.edh .platform-pill svg {
+  width: 14px;
+  height: 14px;
+}
+.edh .people-word {
+  color: var(--violet);
+}
 .edh .eg-copy h3 {
   font-size: clamp(21px, 2.4vw, 30px);
   font-weight: 600;
