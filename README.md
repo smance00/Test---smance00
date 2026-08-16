@@ -1,10 +1,21 @@
-# Hello, I'm Sakyra.
-<a href="https://linkedin.com/in/sakyra-58b336124/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+# Olevy
 
-Sakyra is a recent graduate from Georgia State University with a profound interest in technology and a dedication to solving complex problems. She is a creative, conscientious and tenacious individual with a passion for technology. She thrives within collaborative environments where she can positively contribute and demonstrate her flexibility, reliability, and commitment within a team. 
+A copy of [olevy.ai](https://olevy.ai) — the operational intelligence layer for hiring.
 
-## Objective
+Olevy connects to the ATS and enterprise systems you already run, maps pre-hire signals to post-hire outcomes, and coaches hiring managers with data instead of opinions.
 
-Sakyra's journey in computer science as a recruiting professional has led her to develop a passion for cybersecurity, where she overachieved annual quotas and metrics.  Upon completion of her degree at Georgia State University, she is eager to transition into this field most closely, specifically aiming to join a Security Operations Center (SOC) as a Tier 1 Analyst.
+## What’s included
 
-## Skills
+- Marketing homepage with the editorial design, dark mode, and interactive intelligence explorer
+- Blog index and the three published essays
+- Passwordless sign-in (local one-time code, shown in dev mode)
+- A lightweight workspace after sign-in
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
