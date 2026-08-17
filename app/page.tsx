@@ -350,37 +350,6 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
-            <div className="container">
-              <div className="stats reveal">
-                <div className="stat">
-                  <div className="n" data-count="1000000" data-suffix="+" data-format="comma">
-                    0
-                  </div>
-                  <div className="l">candidate profiles</div>
-                </div>
-                <div className="stat">
-                  <div className="n" data-count="38" data-suffix="%" data-format="">
-                    0
-                  </div>
-                  <div className="l">less time-to-schedule</div>
-                </div>
-                <div className="stat">
-                  <div className="n" data-count="3" data-suffix="×" data-format="">
-                    0
-                  </div>
-                  <div className="l">faster shortlists</div>
-                </div>
-                <div className="stat">
-                  <div className="n" data-count="6" data-suffix="" data-format="">
-                    0
-                  </div>
-                  <div className="l">fit signals per candidate</div>
-                </div>
-              </div>
-            </div>
-          </section>
-
         </main>
       </div>
       <SiteFooter variant="home" />
