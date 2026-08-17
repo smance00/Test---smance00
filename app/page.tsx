@@ -255,36 +255,6 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" id="model" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <p className="sec-eyebrow reveal">The model</p>
-              <h2 className="reveal">How the model learns.</h2>
-              <div className="model-cards">
-                <article className="model-card reveal">
-                  <span className="enum">01</span>
-                  <h3>Personalized learning layer</h3>
-                  <p>
-                    Olevy tracks each manager&apos;s multi-year scoring history and learns to read between the lines of human notes, surfacing high-potential candidates who might otherwise be unfairly rejected.
-                  </p>
-                </article>
-                <article className="model-card reveal">
-                  <span className="enum">02</span>
-                  <h3>Continuous active learning</h3>
-                  <p>
-                    It tracks the correlation between interview transcripts and real team velocity. When a new skill starts driving output, it flags the shift and updates pre-hire screening criteria to match what your team is thriving on now — not what it needed three years ago.
-                  </p>
-                </article>
-                <article className="model-card reveal">
-                  <span className="enum">03</span>
-                  <h3>Pre-hire to post-hire mapping</h3>
-                  <p>
-                    Olevy maps pre-hire signals to outcomes. When your HRIS registers, 18 months later, that a hire was fast-tracked for a promotion, that signal flows back to sharpen the model.
-                  </p>
-                </article>
-              </div>
-            </div>
-          </section>
-
         </main>
       </div>
       <SiteFooter variant="home" />

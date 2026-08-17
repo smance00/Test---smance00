@@ -738,38 +738,6 @@
   white-space: nowrap;
 }
 
-.edh .model-cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2vw, 24px);
-  margin-top: clamp(30px, 4vw, 52px);
-}
-.edh .model-card {
-  height: 100%;
-  padding: clamp(22px, 2.4vw, 32px);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  box-shadow: 0 16px 40px -28px rgba(76, 31, 215, 0.28);
-}
-.edh .model-card .enum {
-  display: inline-block;
-  padding-top: 0;
-  margin-bottom: 16px;
-}
-.edh .model-card h3 {
-  font-size: clamp(20px, 1.8vw, 24px);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-.edh .model-card p {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: clamp(15px, 1.2vw, 16px);
-  line-height: 1.55;
-}
-
 .edh .integrations-band {
   position: relative;
   overflow: hidden;
@@ -1809,9 +1777,6 @@
   .edh .expl-grid {
     grid-template-columns: 1fr;
     gap: 28px;
-  }
-  .edh .model-cards {
-    grid-template-columns: 1fr;
   }
   .edh .slows-head {
     grid-template-columns: 1fr;
