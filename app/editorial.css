@@ -214,13 +214,16 @@
 }
 .edh .hero-split {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(28px, 5vw, 72px);
-  align-items: center;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: clamp(36px, 6vw, 80px);
+  align-items: start;
+}
+.edh .hero-copy {
+  padding-top: 8px;
 }
 .edh .hero-copy h1 {
-  margin-top: 0;
-  max-width: 14ch;
+  margin-top: 18px;
+  max-width: 11ch;
 }
 .edh .eyebrow {
   font-size: 12.5px;
@@ -230,12 +233,12 @@
   color: var(--muted);
 }
 .edh .hero h1 {
-  font-size: clamp(38px, 6.4vw, 80px);
-  line-height: 1.04;
-  font-weight: 600;
-  letter-spacing: -0.032em;
+  font-size: clamp(48px, 5.8vw, 72px);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: -0.038em;
   margin: 22px 0 0;
-  max-width: 20ch;
+  max-width: 11ch;
 }
 .edh .hero-line2 {
   font-family: "Inter Tight", sans-serif;
@@ -282,9 +285,9 @@
 .edh .hero-sub {
   margin: 28px 0 0;
   color: var(--muted);
-  font-size: clamp(16px, 1.5vw, 19px);
-  max-width: 60ch;
-  line-height: 1.62;
+  font-size: clamp(18px, 1.35vw, 20px);
+  max-width: 38ch;
+  line-height: 1.55;
 }
 .edh .hero-cta {
   display: flex;
@@ -325,69 +328,74 @@
   border: 1px solid var(--border);
   border-radius: 16px;
   background: var(--surface);
-  padding: clamp(22px, 2.4vw, 32px);
-  box-shadow: 0 18px 46px -22px rgba(76, 31, 215, 0.28);
-}
-.edh .demo-form-kicker {
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--violet);
+  padding: clamp(28px, 3vw, 40px);
+  box-shadow: 0 16px 40px -20px rgba(20, 20, 28, 0.18);
 }
 .edh .demo-form h3 {
-  font-size: clamp(20px, 2vw, 26px);
-  margin: 10px 0 18px;
+  font-size: clamp(28px, 2.4vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+.edh .demo-form-lead {
+  margin: 10px 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
 }
 .edh .demo-form label {
   display: block;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--ink);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+}
+.edh .demo-form label i {
+  color: #e11d48;
+  font-style: normal;
+  margin-right: 2px;
 }
 .edh .demo-form input {
   display: block;
   width: 100%;
-  margin-top: 6px;
+  margin-top: 8px;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--surface-2);
+  border-radius: 8px;
+  background: var(--surface);
   color: var(--ink);
-  padding: 11px 13px;
-  font-size: 15px;
+  padding: 12px 14px;
+  font-size: 16px;
   font-family: inherit;
 }
 .edh .demo-form input:focus {
   outline: 2px solid var(--violet);
   outline-offset: 2px;
-  background: var(--surface);
 }
-.edh .demo-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.edh .demo-legal {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.edh .demo-legal a {
+  color: var(--ink);
+  text-decoration: underline;
 }
 .edh .demo-error {
   color: #c2410c;
   font-size: 13px;
   margin: 0 0 10px;
 }
-.edh .demo-form-note {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.55;
-}
 .edh .demo-submit {
   width: 100%;
-  margin-top: 4px;
+  margin-top: 6px;
   background: linear-gradient(92deg, var(--grad-a), var(--grad-b));
   color: #fff;
   border: 0;
   border-radius: 10px;
-  padding: 12px 16px;
-  font-size: 15px;
-  font-weight: 600;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
 }
 .edh .demo-submit:hover {
@@ -397,9 +405,13 @@
 .edh .hero-video {
   padding: 0 0 clamp(40px, 5vw, 72px);
 }
+.edh .hero-video .container {
+  display: flex;
+  justify-content: center;
+}
 .edh .hero-video-frame {
   position: relative;
-  width: 100%;
+  width: min(100%, 560px);
   aspect-ratio: 16 / 9;
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -1534,9 +1546,6 @@
   }
 }
 @media (max-width: 720px) {
-  .edh .demo-row {
-    grid-template-columns: 1fr;
-  }
   .edh .nav-links {
     display: none;
   }

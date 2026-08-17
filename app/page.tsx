@@ -72,7 +72,7 @@ export default function HomePage() {
               <div className="hero-copy">
                 <p className="eyebrow reveal">Your AI Hiring Advisor</p>
                 <h1 className="reveal">Make your next hire, the right hire.</h1>
-                <p className="hero-sub prose reveal">
+                <p className="hero-sub reveal">
                   Olevy connects to the systems you already run via ATS and HRIS systems to predict hiring success.
                 </p>
               </div>
