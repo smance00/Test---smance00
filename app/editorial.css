@@ -302,13 +302,16 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #dff3c8;
-  color: #14141c;
+  background: var(--violet-bg);
+  color: var(--violet-deep);
   border-radius: 999px;
   padding: 8px 16px 8px 8px;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
+}
+.dark .edh .hero-points li {
+  color: var(--violet);
 }
 .edh .hero-points svg {
   width: 20px;

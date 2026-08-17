@@ -28,7 +28,7 @@ function ArrowIcon() {
 function CheckIcon() {
   return (
     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <circle cx="10" cy="10" r="10" fill="#2F8A3A" />
+      <circle cx="10" cy="10" r="10" fill="currentColor" />
       <path
         d="M6 10.2 8.6 12.8 14 7.4"
         stroke="#fff"
@@ -100,15 +100,15 @@ export default function HomePage() {
                 <ul className="hero-points reveal">
                   <li>
                     <CheckIcon />
-                    Improve manager effectiveness
+                    Improve decision quality
                   </li>
                   <li>
                     <CheckIcon />
-                    Simplify hiring processes
+                    Find hidden funnel friction
                   </li>
                   <li>
                     <CheckIcon />
-                    Uncover hiring insights
+                    Strengthen team alignment
                   </li>
                 </ul>
               </div>
@@ -137,8 +137,7 @@ export default function HomePage() {
                     Platform Overview <ArrowIcon />
                   </a>
                   <h3>
-                    Turn <span className="people-word">people decisions</span> into{" "}
-                    <span className="limeword swipe" id="lime">business strategy</span>
+                    Improve <span className="people-word">decision quality</span>
                   </h3>
                   <p>
                     Olevy connects hiring behavior, interview signals, and workforce outcomes to reveal what drives stronger hires. Give HR and hiring leaders the intelligence to improve decision quality, uncover hidden friction, and turn hiring into a measurable business lever.
@@ -202,7 +201,7 @@ export default function HomePage() {
           <section className="sec" id="detect" style={{ paddingTop: 0 }}>
             <div className="container">
               <div className="friction-copy reveal">
-                <h3>Find the friction you can&apos;t see.</h3>
+                <h3>Find hidden funnel friction.</h3>
                 <p>
                   Predictive feature-engineering models isolate hidden process bottlenecks and track manager scoring variation — built to streamline the recruitment lifecycle and spot interview fatigue before it costs you a great candidate.
                 </p>
@@ -212,6 +211,9 @@ export default function HomePage() {
 
           <section className="sec" id="advisor" style={{ paddingTop: 0 }}>
             <div className="container">
+              <div className="friction-copy reveal">
+                <h3>Strengthen team alignment.</h3>
+              </div>
               <div className="advisor-band reveal">
                 <a className="platform-pill" href="#ask-levy">
                   AI Advisor <ArrowIcon />
