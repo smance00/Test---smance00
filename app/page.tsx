@@ -143,7 +143,7 @@ export default function HomePage() {
                   <p>
                     Olevy connects hiring behavior, interview signals, and workforce outcomes to reveal what drives stronger hires. Give HR and hiring leaders the intelligence to improve decision quality, uncover hidden friction, and turn hiring into a measurable business lever.
                   </p>
-                  <a className="textlink" href="#detect" style={{ marginTop: 22 }}>
+                  <a className="textlink" href="#hiring-slows" style={{ marginTop: 22 }}>
                     Learn More
                   </a>
                 </div>
@@ -199,100 +199,8 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" id="detect" style={{ paddingTop: 0 }}>
+          <section className="sec" id="advisor" style={{ paddingTop: 0 }}>
             <div className="container">
-              <div className="erow-grid reveal">
-                <WindowChrome url="olevy.app — Signals">
-                  <div className="win-body">
-                    <div className="mock-lb">Manager scoring variance</div>
-                    <div className="funnel">
-                      <div className="fstage">
-                        <span className="fl">Manager A</span>
-                        <div className="fbar-t">
-                          <div className="fbar" style={{ ["--w" as string]: 0.84 }} />
-                        </div>
-                        <span className="fnum"><b>8.4</b></span>
-                      </div>
-                      <div className="fstage">
-                        <span className="fl">Manager B</span>
-                        <div className="fbar-t">
-                          <div className="fbar am" style={{ ["--w" as string]: 0.61 }} />
-                        </div>
-                        <span className="fnum"><b>6.1</b> · flagged</span>
-                      </div>
-                      <div className="fstage">
-                        <span className="fl">Manager C</span>
-                        <div className="fbar-t">
-                          <div className="fbar" style={{ ["--w" as string]: 0.79 }} />
-                        </div>
-                        <span className="fnum"><b>7.9</b></span>
-                      </div>
-                    </div>
-                    <p className="note">
-                      Manager B scores 27% below team average — calibration variance detected.
-                    </p>
-                    <div className="mock-div">
-                      <div className="mock-lb">Interview fatigue signal</div>
-                      <div className="fat">
-                        <div className="day">
-                          <span className="bar" style={{ height: 26 }} />
-                          <span className="d">M</span>
-                        </div>
-                        <div className="day">
-                          <span className="bar" style={{ height: 34 }} />
-                          <span className="d">T</span>
-                        </div>
-                        <div className="day">
-                          <span className="bar" style={{ height: 40 }} />
-                          <span className="d">W</span>
-                        </div>
-                        <div className="day">
-                          <span className="bar" style={{ height: 52 }} />
-                          <span className="d">T</span>
-                        </div>
-                        <div className="day">
-                          <span className="bar hot" style={{ height: 70 }} />
-                          <span className="d">F</span>
-                        </div>
-                      </div>
-                      <div className="spark-wrap">
-                        <span className="sl">
-                          Late-week reject rate · <b>85%</b>
-                        </span>
-                        <svg className="spark" viewBox="0 0 180 40" preserveAspectRatio="none" aria-hidden="true">
-                          <path className="line" d="M2 30 L34 27 L66 24 L98 20 L130 15 L160 8 L178 6" />
-                        </svg>
-                      </div>
-                      <div className="flag">
-                        <div className="ft">Fri 3 PM interviews → 85% reject</div>
-                        <div className="fs">
-                          Late-week fatigue pattern — flagged before it costs a great candidate.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </WindowChrome>
-                <div className="eg-copy">
-                  <span className="idx">02 · Detect</span>
-                  <h3>Find the friction you can&apos;t see.</h3>
-                  <p>
-                    Predictive feature-engineering models isolate hidden process bottlenecks and track manager scoring variation — built to streamline the recruitment lifecycle and spot interview fatigue before it costs you a great candidate.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="sec" id="learn" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <p className="sec-eyebrow reveal">03 · Learn &amp; coach</p>
-              <h2 className="reveal">Cross-reference who actually worked out.</h2>
-              <p className="sec-intro reveal">
-                Because Olevy runs on your existing ATS data, it cross-references your real hires — the ones already sourced and screened through your ATS and enterprise systems — and compares who actually succeeded against your future candidate profiles.
-              </p>
-              <p className="sec-intro reveal">
-                Then it delivers real-time behavioral coaching widgets: non-punitive, data-backed guidance, directly to hiring managers.
-              </p>
               <div className="advisor-band reveal">
                 <a className="platform-pill" href="#ask-levy">
                   AI Advisor <ArrowIcon />
@@ -347,7 +255,7 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" style={{ paddingTop: 0 }}>
+          <section className="sec" id="model" style={{ paddingTop: 0 }}>
             <div className="container">
               <p className="sec-eyebrow reveal">The model</p>
               <h2 className="reveal">How the model learns.</h2>

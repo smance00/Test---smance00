@@ -57,7 +57,7 @@ export default function DashboardPage() {
           <Link href="/" className="btn-ghost">
             Back to site
           </Link>
-          <Link href="/#learn" className="btn-primary">
+          <Link href="/#hiring-slows" className="btn-primary">
             See intelligence
           </Link>
         </div>
