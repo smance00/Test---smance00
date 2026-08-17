@@ -213,6 +213,12 @@ export default function HomePage() {
             <div className="container">
               <div className="friction-copy reveal">
                 <h3>Strengthen team alignment.</h3>
+                <p>
+                  Because Olevy runs on your existing ATS data, it cross-references your real hires — the ones already sourced and screened through your ATS and enterprise systems — and compares who actually succeeded against your future candidate profiles.
+                </p>
+                <p>
+                  Then it delivers real-time behavioral coaching widgets: non-punitive, data-backed guidance, directly to hiring managers.
+                </p>
               </div>
               <div className="advisor-band reveal">
                 <a className="platform-pill" href="#ask-levy">

@@ -700,7 +700,7 @@
   font-size: clamp(15px, 1.35vw, 17px);
 }
 .edh .friction-copy {
-  max-width: 46ch;
+  max-width: 60ch;
   padding: clamp(8px, 2vw, 16px) 0 clamp(12px, 2vw, 24px);
 }
 .edh .friction-copy h3 {
