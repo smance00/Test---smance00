@@ -143,7 +143,7 @@ export default function HomePage() {
                   <p>
                     Olevy connects hiring behavior, interview signals, and workforce outcomes to reveal what drives stronger hires. Give HR and hiring leaders the intelligence to improve decision quality, uncover hidden friction, and turn hiring into a measurable business lever.
                   </p>
-                  <a className="textlink" href="#hiring-slows" style={{ marginTop: 22 }}>
+                  <a className="textlink" href="#detect" style={{ marginTop: 22 }}>
                     Learn More
                   </a>
                 </div>
@@ -195,6 +195,17 @@ export default function HomePage() {
                     </div>
                   </div>
                 </WindowChrome>
+              </div>
+            </div>
+          </section>
+
+          <section className="sec" id="detect" style={{ paddingTop: 0 }}>
+            <div className="container">
+              <div className="friction-copy reveal">
+                <h3>Find the friction you can&apos;t see.</h3>
+                <p>
+                  Predictive feature-engineering models isolate hidden process bottlenecks and track manager scoring variation — built to streamline the recruitment lifecycle and spot interview fatigue before it costs you a great candidate.
+                </p>
               </div>
             </div>
           </section>

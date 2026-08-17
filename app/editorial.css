@@ -696,6 +696,21 @@
   color: var(--muted);
   font-size: clamp(15px, 1.35vw, 17px);
 }
+.edh .friction-copy {
+  max-width: 46ch;
+  padding: clamp(8px, 2vw, 16px) 0 clamp(12px, 2vw, 24px);
+}
+.edh .friction-copy h3 {
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.028em;
+  line-height: 1.12;
+}
+.edh .friction-copy p {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: clamp(16px, 1.4vw, 18px);
+}
 .edh .erow-grid {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
