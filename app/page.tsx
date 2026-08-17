@@ -5,6 +5,7 @@ import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { AskLevy } from "@/components/AskLevy";
 import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
+import { IntegrationsBand } from "@/components/IntegrationsBand";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DEMO_MAIL } from "@/lib/utils";
 
@@ -71,7 +72,13 @@ export default function HomePage() {
             <div className="container hero-split">
               <div className="hero-copy">
                 <p className="eyebrow reveal">Your AI Hiring Advisor</p>
-                <h1 className="reveal">Make your next hire, the right hire.</h1>
+                <h1 className="reveal">
+                  Make your <span className="people-word">next hire</span>, the{" "}
+                  <span className="limeword" id="right-hire">
+                    right hire
+                  </span>
+                  .
+                </h1>
                 <p className="hero-sub reveal">
                   Olevy connects to the systems you already run via ATS and HRIS systems to predict hiring success.
                 </p>
@@ -279,6 +286,12 @@ export default function HomePage() {
             </div>
           </section>
 
+          <section className="sec" id="integrations" style={{ paddingTop: 0 }}>
+            <div className="container">
+              <IntegrationsBand />
+            </div>
+          </section>
+
           <section className="sec" style={{ paddingTop: 0 }}>
             <div className="container">
               <div className="insight reveal" style={{ marginTop: 0 }}>
@@ -311,34 +324,28 @@ export default function HomePage() {
             <div className="container">
               <p className="sec-eyebrow reveal">The model</p>
               <h2 className="reveal">How the model learns.</h2>
-              <div style={{ marginTop: "clamp(30px,4vw,52px)" }}>
-                <div className="erow reveal">
+              <div className="model-cards">
+                <article className="model-card reveal">
                   <span className="enum">01</span>
-                  <div className="erow-body">
-                    <h3>Personalized learning layer</h3>
-                    <p>
-                      Olevy tracks each manager&apos;s multi-year scoring history and learns to read between the lines of human notes, surfacing high-potential candidates who might otherwise be unfairly rejected.
-                    </p>
-                  </div>
-                </div>
-                <div className="erow reveal">
+                  <h3>Personalized learning layer</h3>
+                  <p>
+                    Olevy tracks each manager&apos;s multi-year scoring history and learns to read between the lines of human notes, surfacing high-potential candidates who might otherwise be unfairly rejected.
+                  </p>
+                </article>
+                <article className="model-card reveal">
                   <span className="enum">02</span>
-                  <div className="erow-body">
-                    <h3>Continuous active learning</h3>
-                    <p>
-                      It tracks the correlation between interview transcripts and real team velocity. When a new skill starts driving output, it flags the shift and updates pre-hire screening criteria to match what your team is thriving on now — not what it needed three years ago.
-                    </p>
-                  </div>
-                </div>
-                <div className="erow reveal">
+                  <h3>Continuous active learning</h3>
+                  <p>
+                    It tracks the correlation between interview transcripts and real team velocity. When a new skill starts driving output, it flags the shift and updates pre-hire screening criteria to match what your team is thriving on now — not what it needed three years ago.
+                  </p>
+                </article>
+                <article className="model-card reveal">
                   <span className="enum">03</span>
-                  <div className="erow-body">
-                    <h3>Pre-hire to post-hire mapping</h3>
-                    <p>
-                      Olevy maps pre-hire signals to outcomes. When your HRIS registers, 18 months later, that a hire was fast-tracked for a promotion, that signal flows back to sharpen the model.
-                    </p>
-                  </div>
-                </div>
+                  <h3>Pre-hire to post-hire mapping</h3>
+                  <p>
+                    Olevy maps pre-hire signals to outcomes. When your HRIS registers, 18 months later, that a hire was fast-tracked for a promotion, that signal flows back to sharpen the model.
+                  </p>
+                </article>
               </div>
             </div>
           </section>

@@ -55,6 +55,11 @@ export function SiteFooter({ variant = "home" }: { variant?: FooterVariant }) {
                 Platform overview
               </a>
             </li>
+            <li>
+              <a className="transition hover:text-fg" href="/#integrations">
+                Integrations
+              </a>
+            </li>
           </ul>
         </div>
         <div>

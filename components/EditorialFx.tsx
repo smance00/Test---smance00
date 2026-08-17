@@ -34,8 +34,10 @@ export function EditorialFx() {
         observer.observe(el);
       });
 
-      const lime = root.querySelector("#lime");
-      const limeTimer = window.setTimeout(() => lime?.classList.add("swipe"), 400);
+      const limes = root.querySelectorAll(".limeword");
+      const limeTimer = window.setTimeout(() => {
+        limes.forEach((el) => el.classList.add("swipe"));
+      }, 400);
 
       const counters = root.querySelectorAll<HTMLElement>("[data-count]");
       const countObserver = new IntersectionObserver((entries) => {
