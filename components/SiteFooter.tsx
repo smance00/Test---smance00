@@ -51,6 +51,11 @@ export function SiteFooter({ variant = "home" }: { variant?: FooterVariant }) {
           </h4>
           <ul className={`space-y-3 text-sm text-muted ${home ? "mt-5" : "mt-4"}`}>
             <li>
+              <a className="transition hover:text-fg" href="/#human-loop">
+                Human in the Loop
+              </a>
+            </li>
+            <li>
               <a className="transition hover:text-fg" href="/#overview">
                 Platform overview
               </a>

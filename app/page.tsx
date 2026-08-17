@@ -4,6 +4,7 @@ import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { AskLevy } from "@/components/AskLevy";
+import { LoopBubbles } from "@/components/LoopBubbles";
 import { HiringSlowsCards } from "@/components/HiringSlowsCards";
 import { IntegrationsBand } from "@/components/IntegrationsBand";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -64,7 +65,7 @@ export default function HomePage() {
         <a className="announce" href="#request-demo">
           <span className="announce-new">New</span>
           <span className="announce-copy">
-            Introducing your AI Hiring Advisor
+            Human in the Loop — AI recommends. You decide.
             <ArrowIcon />
           </span>
         </a>
@@ -86,7 +87,7 @@ export default function HomePage() {
           <section className="hero">
             <div className="container hero-split">
               <div className="hero-copy">
-                <p className="eyebrow reveal">Your AI Hiring Advisor</p>
+                <p className="eyebrow reveal">Human in the Loop</p>
                 <h1 className="reveal">
                   Make your <span className="people-word">next hire</span>, the{" "}
                   <span className="limeword" id="right-hire">
@@ -95,7 +96,7 @@ export default function HomePage() {
                   .
                 </h1>
                 <p className="hero-sub reveal">
-                  Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next.
+                  Olevy floats the signal from the ATS and HRIS you already run. You choose whether to pop it — and make the hire.
                 </p>
                 <ul className="hero-points reveal">
                   <li>
@@ -126,6 +127,12 @@ export default function HomePage() {
                   allowFullScreen
                 />
               </div>
+            </div>
+          </section>
+
+          <section className="loop-band" id="human-loop">
+            <div className="container">
+              <LoopBubbles />
             </div>
           </section>
 
@@ -225,11 +232,11 @@ export default function HomePage() {
                   AI Advisor <ArrowIcon />
                 </a>
                 <h2>
-                  Learn from outcomes and <span className="people-word">reduce risk</span> with your personal{" "}
+                  Stay <span className="people-word">in the loop</span> with your personal{" "}
                   <span className="limeword swipe">AI Advisor</span>
                 </h2>
                 <p>
-                  Surface patterns across interviews, manager behavior, and hiring outcomes to understand where risk is forming and what consistently leads to stronger hires. Use those insights to refine the process and improve the decisions that follow.
+                  Levy floats patterns across interviews, manager behavior, and hiring outcomes. You pop the ones that matter — and leave the rest. The human always decides.
                 </p>
                 <a className="textlink advisor-cta" href="#ask-levy">
                   Meet the advisor <ArrowIcon />
@@ -248,10 +255,10 @@ export default function HomePage() {
 
           <section className="sec" style={{ paddingTop: 0 }}>
             <div className="container">
-              <div className="insight reveal" style={{ marginTop: 0 }}>
+              <div className="insight insight-bubble reveal" style={{ marginTop: 0 }}>
                 <span className="il">
                   <i />
-                  Data insight
+                  A signal just floated
                 </span>
                 <p className="ib">
                   Over the last 24 months, candidates from non-traditional backgrounds on your team have shown <b>40% higher retention</b> with equal output. Consider advancing Candidate X for a technical screening loop.
@@ -264,10 +271,10 @@ export default function HomePage() {
                 </div>
                 <div className="iact">
                   <button type="button" className="pill-primary">
-                    Advance candidate
+                    Pop — advance
                   </button>
                   <button type="button" className="pill-ghost">
-                    Dismiss
+                    Let it float
                   </button>
                 </div>
               </div>

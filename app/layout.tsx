@@ -17,9 +17,9 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Olevy — The operational intelligence layer for hiring",
+  title: "Olevy — Human in the Loop hiring intelligence",
   description:
-    "Olevy connects your existing ATS and HRIS to turn the hiring data you already have into predictive intelligence — spotting process bottlenecks, auditing bias, and coaching hiring managers in real time.",
+    "Olevy floats AI hiring signals from the ATS and HRIS you already run. You stay in the loop: pop a recommendation to act, or let it float.",
   applicationName: "Olevy",
   manifest: "/manifest.json",
   icons: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: "#3b1858",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
