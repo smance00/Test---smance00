@@ -386,11 +386,6 @@
   font-size: 13px;
   margin: 0 0 10px;
 }
-.edh .demo-form-note {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.55;
-}
 .edh .demo-submit {
   width: 100%;
   margin-top: 6px;
@@ -410,9 +405,13 @@
 .edh .hero-video {
   padding: 0 0 clamp(40px, 5vw, 72px);
 }
+.edh .hero-video .container {
+  display: flex;
+  justify-content: center;
+}
 .edh .hero-video-frame {
   position: relative;
-  width: 100%;
+  width: min(100%, 560px);
   aspect-ratio: 16 / 9;
   border: 1px solid var(--border);
   border-radius: 16px;
