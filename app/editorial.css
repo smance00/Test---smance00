@@ -210,35 +210,35 @@
 }
 
 .edh .hero {
-  padding: clamp(54px, 8vw, 104px) 0 clamp(40px, 5vw, 64px);
+  padding: clamp(40px, 6vw, 72px) 0 clamp(36px, 5vw, 56px);
 }
 .edh .hero-split {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
-  gap: clamp(36px, 6vw, 80px);
-  align-items: start;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 420px);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
 }
 .edh .hero-copy {
-  padding-top: 8px;
+  padding-top: 0;
 }
 .edh .hero-copy h1 {
-  margin-top: 18px;
-  max-width: 16ch;
+  margin-top: 14px;
+  max-width: 20ch;
 }
 .edh .eyebrow {
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-transform: none;
   color: var(--muted);
 }
 .edh .hero h1 {
-  font-size: clamp(48px, 5.8vw, 72px);
-  line-height: 0.98;
+  font-size: clamp(36px, 4.2vw, 54px);
+  line-height: 1.08;
   font-weight: 700;
-  letter-spacing: -0.038em;
-  margin: 22px 0 0;
-  max-width: 16ch;
+  letter-spacing: -0.032em;
+  margin: 14px 0 0;
+  max-width: 20ch;
 }
 .edh .hero-line2 {
   font-family: "Inter Tight", sans-serif;
@@ -283,11 +283,37 @@
   background-size: 100% 0.3em;
 }
 .edh .hero-sub {
-  margin: 28px 0 0;
+  margin: 20px 0 0;
   color: var(--muted);
-  font-size: clamp(18px, 1.35vw, 20px);
-  max-width: 38ch;
+  font-size: clamp(16px, 1.2vw, 18px);
+  max-width: 46ch;
   line-height: 1.55;
+}
+.edh .hero-points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.edh .hero-points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #dff3c8;
+  color: #14141c;
+  border-radius: 999px;
+  padding: 8px 16px 8px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.edh .hero-points svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 .edh .hero-cta {
   display: flex;

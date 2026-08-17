@@ -25,6 +25,21 @@ function ArrowIcon() {
   );
 }
 
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="10" fill="#2F8A3A" />
+      <path
+        d="M6 10.2 8.6 12.8 14 7.4"
+        stroke="#fff"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function WindowChrome({ url, children }: { url: string; children: React.ReactNode }) {
   return (
     <div className="win">
@@ -80,8 +95,22 @@ export default function HomePage() {
                   .
                 </h1>
                 <p className="hero-sub reveal">
-                  Olevy connects to the systems you already run via ATS and HRIS systems to predict hiring success.
+                  Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next.
                 </p>
+                <ul className="hero-points reveal">
+                  <li>
+                    <CheckIcon />
+                    Improve manager effectiveness
+                  </li>
+                  <li>
+                    <CheckIcon />
+                    Simplify hiring processes
+                  </li>
+                  <li>
+                    <CheckIcon />
+                    Uncover hiring insights
+                  </li>
+                </ul>
               </div>
               <DemoRequestForm />
             </div>
