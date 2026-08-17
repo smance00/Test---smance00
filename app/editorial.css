@@ -867,6 +867,152 @@
   margin: 26px auto 0;
 }
 
+.edh .slows {
+  margin-top: clamp(48px, 6vw, 80px);
+}
+.edh .slows-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(28px, 5vw, 80px);
+  align-items: end;
+}
+.edh .slows-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #d8f0b8;
+  color: #14141c;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+.edh .slows-pill svg {
+  width: 14px;
+  height: 14px;
+}
+.edh .slows-lead h2 {
+  margin-top: 18px;
+  max-width: 16ch;
+  font-size: clamp(32px, 4.2vw, 52px);
+}
+.edh .slows-copy p {
+  color: var(--muted);
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.55;
+}
+.edh .slows-copy .textlink {
+  margin-top: 18px;
+}
+.edh .slows-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 22px);
+  margin-top: clamp(32px, 4vw, 48px);
+}
+.edh .slows-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -28px rgba(76, 31, 215, 0.22);
+}
+.edh .slows-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 248px;
+  padding: 28px 20px 12px;
+  overflow: hidden;
+}
+.edh .slows-glow {
+  position: absolute;
+  width: 78%;
+  height: 72%;
+  left: 11%;
+  top: 10%;
+  border-radius: 50%;
+  filter: blur(36px);
+  pointer-events: none;
+}
+.edh .slows-card.glow-pink .slows-glow {
+  background: rgba(232, 176, 255, 0.62);
+}
+.edh .slows-card.glow-gold .slows-glow {
+  background: rgba(255, 220, 140, 0.7);
+}
+.edh .slows-card.glow-mint .slows-glow {
+  background: rgba(176, 232, 196, 0.7);
+}
+.edh .slows-mock {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  padding: 14px 14px 12px;
+  box-shadow: 0 16px 32px -20px rgba(20, 20, 40, 0.35);
+}
+.edh .slows-mock .drift {
+  height: 88px;
+  margin-top: 12px;
+  gap: 8px;
+}
+.edh .slows-mock .bias {
+  margin-top: 10px;
+  gap: 7px;
+}
+.edh .slows-mock .biasrow {
+  padding: 7px 10px;
+  font-size: 12px;
+}
+.edh .slows-mock .mrow {
+  margin-top: 10px;
+}
+.edh .slows-body {
+  padding: 8px 22px 24px;
+}
+.edh .slows-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.edh .slows-title h3 {
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.edh .slows-go {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.edh .slows-go:hover {
+  background: var(--violet-bg);
+  color: var(--violet);
+}
+.edh .slows-go svg {
+  width: 14px;
+  height: 14px;
+}
+.edh .slows-body p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
 .edh .levy-chat {
   margin: clamp(32px, 4vw, 48px) auto 0;
   max-width: 640px;
@@ -1639,6 +1785,14 @@
     gap: 28px;
   }
   .edh .model-cards {
+    grid-template-columns: 1fr;
+  }
+  .edh .slows-head {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  .edh .slows-cards {
     grid-template-columns: 1fr;
   }
   .edh .integrations-band {

@@ -4,7 +4,7 @@ import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { AskLevy } from "@/components/AskLevy";
-import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
+import { HiringSlowsCards } from "@/components/HiringSlowsCards";
 import { IntegrationsBand } from "@/components/IntegrationsBand";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DEMO_MAIL } from "@/lib/utils";
@@ -280,9 +280,7 @@ export default function HomePage() {
                 </a>
                 <AskLevy />
               </div>
-              <div className="reveal">
-                <IntelligenceExplorer />
-              </div>
+              <HiringSlowsCards />
             </div>
           </section>
 
