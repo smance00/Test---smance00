@@ -33,6 +33,16 @@ export function SiteFooter({ variant = "home" }: { variant?: FooterVariant }) {
           </h4>
           <ul className={`mt-5 space-y-3 text-sm text-muted ${home ? "" : "mt-4"}`}>
             <li>
+              <a className="transition hover:text-fg" href="/#learn">
+                How it coaches
+              </a>
+            </li>
+            <li>
+              <a className="transition hover:text-fg" href="/#detect">
+                {home ? "How it works" : "How we help"}
+              </a>
+            </li>
+            <li>
               <a className="transition hover:text-fg" href={DEMO_MAIL}>
                 {home ? "Book a demo" : "Book a Consultation"}
               </a>
@@ -51,18 +61,13 @@ export function SiteFooter({ variant = "home" }: { variant?: FooterVariant }) {
           </h4>
           <ul className={`space-y-3 text-sm text-muted ${home ? "mt-5" : "mt-4"}`}>
             <li>
-              <a className="transition hover:text-fg" href="/#human-loop">
-                Human in the Loop
+              <a className="transition hover:text-fg" href="/blog">
+                Blog
               </a>
             </li>
             <li>
-              <a className="transition hover:text-fg" href="/#overview">
-                Platform overview
-              </a>
-            </li>
-            <li>
-              <a className="transition hover:text-fg" href="/#integrations">
-                Integrations
+              <a className="transition hover:text-fg" href={home ? "/login" : "/#who"}>
+                {home ? "Sign in" : "About Olevy"}
               </a>
             </li>
           </ul>
@@ -78,11 +83,38 @@ export function SiteFooter({ variant = "home" }: { variant?: FooterVariant }) {
             Product
           </h4>
           <ul className={`space-y-3 text-sm text-muted ${home ? "mt-5" : "mt-4"}`}>
-            <li>
-              <a className="transition hover:text-fg" href="/#advisor">
-                AI Advisor
-              </a>
-            </li>
+            {home ? (
+              <>
+                <li>
+                  <a className="transition hover:text-fg" href="/dashboard">
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a className="transition hover:text-fg" href="/#learn">
+                    Intelligence
+                  </a>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <a className="transition hover:text-fg" href="/login">
+                    Sign in
+                  </a>
+                </li>
+                <li>
+                  <a className="transition hover:text-fg" href="/dashboard">
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a className="transition hover:text-fg" href="/#detect">
+                    The platform
+                  </a>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <div>
