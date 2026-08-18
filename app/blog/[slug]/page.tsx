@@ -27,29 +27,29 @@ export default function BlogArticlePage({ params }: { params: Params }) {
   const related = getRelatedPosts(post.slug);
 
   return (
-    <div className="edh">
+    <div className="olv">
       <EditorialFx />
       <LoopChrome />
-      <main className="edh-page">
-        <div className="container">
-          <Link href="/blog" className="eyebrow">
+      <main className="olv-page">
+        <div className="wrap">
+          <Link href="/blog" className="olv-kicker">
             ← Notes
           </Link>
           <h1 className="reveal" style={{ marginTop: 16 }}>
             {post.title}
           </h1>
-          <p className="prose reveal">
+          <p className="olv-prose reveal">
             {post.dateLabel} · {post.minutes} min
           </p>
           {post.paragraphs.map((paragraph) => (
-            <p className="prose reveal" key={paragraph}>
+            <p className="olv-prose reveal" key={paragraph}>
               {paragraph}
             </p>
           ))}
-          <div className="edh-chapters" style={{ marginTop: 64 }}>
+          <div className="olv-chapters" style={{ marginTop: 64 }}>
             {related.map((item) => (
               <article key={item.slug} className="reveal">
-                <p className="eyebrow">Also</p>
+                <p className="olv-kicker">Also</p>
                 <h2>
                   <Link href={`/blog/${item.slug}`}>{item.title}</Link>
                 </h2>

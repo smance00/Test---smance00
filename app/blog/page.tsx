@@ -12,20 +12,20 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="edh">
+    <div className="olv">
       <EditorialFx />
       <LoopChrome />
-      <main className="edh-page">
-        <div className="container">
-          <p className="eyebrow reveal">Notes</p>
+      <main className="olv-page">
+        <div className="wrap">
+          <p className="olv-kicker reveal">Notes</p>
           <h1 className="reveal">Signals we wrote down.</h1>
-          <p className="prose reveal">
+          <p className="olv-prose reveal">
             Hiring notes from the loop — not playbooks that close it for you.
           </p>
-          <div className="edh-chapters">
+          <div className="olv-chapters">
             {posts.map((post) => (
               <article key={post.slug} className="reveal">
-                <p className="eyebrow">{post.category}</p>
+                <p className="olv-kicker">{post.category}</p>
                 <h2>
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h2>
