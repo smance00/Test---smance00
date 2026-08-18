@@ -8,9 +8,9 @@ export function LoopChrome() {
         <BrandMark height={22} variant="light" />
       </Link>
       <nav>
-        <Link href="/concept">Concept</Link>
+        <Link href="/#overview">Product</Link>
         <Link href="/signals">Signals</Link>
-        <Link href="/#levy">Levy</Link>
+        <Link href="/#advisor">Advisor</Link>
         <Link className="olv-nav-cta" href="/demo">
           Book a demo
         </Link>

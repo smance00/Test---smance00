@@ -125,7 +125,7 @@ export function HiringSlowsCards() {
       <div className="slows-head reveal">
         <div className="slows-lead">
           <a className="slows-pill" href="#hiring-slows">
-            Human in the Loop <ArrowIcon />
+            Intelligence <ArrowIcon />
           </a>
           <h2>See where hiring slows.</h2>
         </div>

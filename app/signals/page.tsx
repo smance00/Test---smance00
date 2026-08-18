@@ -17,9 +17,9 @@ export default function SignalsPage() {
       <main className="olv-page">
         <div className="wrap">
           <p className="olv-kicker reveal">Signals</p>
-          <h1 className="reveal">Three kinds of bubble.</h1>
+          <h1 className="reveal">What Olevy surfaces.</h1>
           <p className="olv-prose reveal">
-            Olevy does not invent a new system of record. It reads the one you have, and raises only what a person should see.
+            Olevy does not invent a new system of record. It reads the ATS and HRIS you already have, and shows HR and hiring leaders three things.
           </p>
           <div className="olv-chapters">
             <article id="quality" className="reveal">
@@ -43,7 +43,7 @@ export default function SignalsPage() {
                 Because Olevy runs on your existing ATS data, it cross-references your real hires — the ones already sourced and screened through your ATS and enterprise systems — and compares who actually succeeded against your future candidate profiles.
               </p>
               <p>
-                Then it delivers real-time behavioral coaching widgets: non-punitive, data-backed guidance, directly to hiring managers. The manager stays in the loop. The model does not scold. It offers a bubble.
+                Then it delivers real-time behavioral coaching widgets: non-punitive, data-backed guidance, directly to hiring managers. The manager stays in control. The model does not scold.
               </p>
             </article>
           </div>

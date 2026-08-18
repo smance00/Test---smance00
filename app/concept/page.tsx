@@ -29,13 +29,10 @@ export default function ConceptPage() {
             Olevy is built the other way. The model is allowed to be certain. The human is required to be present.
           </p>
           <p className="olv-prose reveal">
-            We picture every recommendation as a soap bubble — iridescent, brief, easy to break. A finger hovers. That millimeter is the product. Pop, and a decision enters the world. Leave it, and the air keeps the signal. Both outcomes teach the next bubble what your team actually values.
+            This cycle we are talking about that as Human in the Loop — a campaign idea, not the product itself. The product is an AI Hiring Advisor on the ATS and HRIS you already run. It surfaces decision quality, hidden funnel friction, and team alignment. A person still makes the call.
           </p>
           <p className="olv-prose reveal">
-            That is why Olevy connects to the ATS and HRIS you already run, and why it will not replace a hiring manager. It cross-references the people who already worked out against the people you have not hired yet. Then it floats a coaching widget, a risk, a name. Non-punitive. Data-backed. Yours to pop.
-          </p>
-          <p className="olv-prose reveal">
-            Human in the Loop is not a disclaimer. It is the brand. If the bubble pops without you, we have failed.
+            Next year the language may change. The job will not: recommend, then wait. Never hire on someone&apos;s behalf.
           </p>
           <p className="reveal" style={{ marginTop: 36 }}>
             <Link className="olv-nav-cta" href="/signals">
