@@ -18,9 +18,9 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Olevy — Human in the Loop",
+  title: "Olevy — AI Hiring Advisor",
   description:
-    "An AI Hiring Advisor that never closes the loop. Olevy floats the signal. You decide whether it pops.",
+    "Olevy helps hiring teams make better decisions. It turns ATS and HRIS data into clear insight, spots risk, and guides managers in the moment — while a person still makes the call.",
   applicationName: "Olevy",
   manifest: "/manifest.json",
   icons: {

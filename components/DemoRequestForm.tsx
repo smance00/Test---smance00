@@ -52,10 +52,10 @@ export function DemoRequestForm({
   return (
     <form className={`demo-form reveal ${className}`.trim()} onSubmit={onSubmit} id={id}>
       <h3>Request a demo</h3>
-      <p className="demo-form-lead">Schedule a 30-minute product demo with a real, live person.</p>
+      <p className="demo-form-lead">30 minutes with a person. We walk a process like yours.</p>
       <label>
         <span>
-          <i aria-hidden="true">*</i> First Name:
+          <i aria-hidden="true">*</i> First name
         </span>
         <input
           type="text"
@@ -68,7 +68,7 @@ export function DemoRequestForm({
       </label>
       <label>
         <span>
-          <i aria-hidden="true">*</i> Last Name:
+          <i aria-hidden="true">*</i> Last name
         </span>
         <input
           type="text"
@@ -81,7 +81,7 @@ export function DemoRequestForm({
       </label>
       <label>
         <span>
-          <i aria-hidden="true">*</i> Email Address:
+          <i aria-hidden="true">*</i> Work email
         </span>
         <input
           type="email"
@@ -94,7 +94,7 @@ export function DemoRequestForm({
       </label>
       {error ? <p className="demo-error">{error}</p> : null}
       <button type="submit" className="demo-submit">
-        Get Started
+        Request a demo
       </button>
       <p className="demo-legal">
         By submitting your information, you agree to Olevy&apos;s{" "}

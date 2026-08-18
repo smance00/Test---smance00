@@ -31,13 +31,13 @@ export default function HomePage() {
         <section className="olv-open">
           <div className="wrap olv-open-grid">
             <div className="olv-open-copy">
-              <p className="olv-kicker reveal">Olevy</p>
+              <p className="olv-kicker reveal">AI Hiring Advisor</p>
               <h1 className="olv-title reveal">
-                <b>Human</b>
-                <i>in the Loop</i>
+                <b>Better hiring decisions.</b>
+                <i>A person still makes the call.</i>
               </h1>
               <p className="olv-lede reveal">
-                Olevy helps hiring teams make better decisions by turning hiring data into clear insights, spotting risk, and guiding managers in the moment.
+                Olevy turns the ATS and HRIS you already run into clear insight, spots risk in the funnel, and guides managers in the moment.
               </p>
               <ul className="olv-points reveal">
                 <li>
@@ -72,19 +72,19 @@ export default function HomePage() {
         <section className="olv-section" id="rule">
           <div className="wrap">
             <h2 className="olv-rule reveal">
-              The model recommends. <em>You</em> remain the decision.
+              Recommendations in. <em>Decisions stay with you.</em>
             </h2>
             <p className="olv-prose reveal" style={{ marginTop: 28 }}>
-              Olevy is an AI Hiring Advisor. It reads the ATS and HRIS you already run, then puts a recommendation in front of a person — never in place of one.
+              Olevy is an AI hiring advisor for teams that already run an ATS. It surfaces the call. It does not take it.
             </p>
           </div>
         </section>
 
         <section className="olv-section tight" id="what">
           <div className="wrap">
-            <p className="olv-kicker reveal">The product</p>
+            <p className="olv-kicker reveal">Product</p>
             <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)", maxWidth: "16ch" }}>
-              Make your next hire the right hire.
+              Intelligence on the hiring you already do.
             </h2>
             <p className="olv-prose reveal" style={{ marginTop: 22 }}>
               Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next. Interview scorecards, hiring-manager feedback, performance reviews, candidate profiles, pipeline events.
@@ -97,9 +97,9 @@ export default function HomePage() {
 
         <section className="olv-section tight" id="signals">
           <div className="wrap">
-            <p className="olv-kicker reveal">What it surfaces</p>
+            <p className="olv-kicker reveal">Capabilities</p>
             <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)" }}>
-              Three things hiring leaders need.
+              What hiring leaders see.
             </h2>
             <div className="olv-pillars">
               <Link className="olv-pillar reveal" href="/signals#quality">
@@ -205,9 +205,9 @@ export default function HomePage() {
 
         <section className="olv-section tight" id="systems">
           <div className="wrap">
-            <p className="olv-kicker reveal">Connections</p>
+            <p className="olv-kicker reveal">Integrations</p>
             <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)", maxWidth: "16ch" }}>
-              Your systems. Already running.
+              Connects to the stack you already run.
             </h2>
             <p className="olv-prose reveal" style={{ marginTop: 18 }}>
               No migration. No cold start. Olevy activates interview scorecards, hiring-manager feedback, performance reviews, candidate profiles, and pipeline events.
