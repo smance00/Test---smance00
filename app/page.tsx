@@ -1,10 +1,26 @@
 import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { AskLevy } from "@/components/AskLevy";
+import { HeroOrbs } from "@/components/HeroOrbs";
 import { LoopBubbles } from "@/components/LoopBubbles";
 import { LoopChrome } from "@/components/LoopChrome";
 import { LoopFooter } from "@/components/LoopFooter";
 import Link from "next/link";
+
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="10" fill="currentColor" />
+      <path
+        d="M6 10.2 8.6 12.8 14 7.4"
+        stroke="#3b1858"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -13,12 +29,7 @@ export default function HomePage() {
       <LoopChrome />
       <main>
         <section className="olv-open">
-          <div className="olv-open-art" aria-hidden="true">
-            <span className="olv-orb a" />
-            <span className="olv-orb b" />
-            <span className="olv-orb c" />
-            <span className="olv-finger" />
-          </div>
+          <HeroOrbs />
           <div className="wrap">
             <p className="olv-kicker reveal">Olevy</p>
             <h1 className="olv-title reveal">
@@ -28,7 +39,20 @@ export default function HomePage() {
             <p className="olv-lede reveal">
               AI can recommend the hire. Only a person should make it.
             </p>
-            <span className="olv-scroll reveal">See how it works</span>
+            <ul className="olv-points reveal">
+              <li>
+                <CheckIcon />
+                Improve decision quality
+              </li>
+              <li>
+                <CheckIcon />
+                Find hidden funnel friction
+              </li>
+              <li>
+                <CheckIcon />
+                Strengthen team alignment
+              </li>
+            </ul>
           </div>
         </section>
 
