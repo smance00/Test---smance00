@@ -1,21 +1,21 @@
 html:has(.olv),
 html:has(.olv) body {
-  background: #2a1040;
-  color: #f6f2ff;
+  background: #ffffff;
+  color: #14141c;
 }
 
 .olv {
   --plum: #3b1858;
   --plum-deep: #2a1040;
-  --violet: #b59cff;
-  --lime: #e8fb2e;
-  --ink: #f6f2ff;
-  --muted: rgba(246, 242, 255, 0.68);
-  --line: rgba(255, 255, 255, 0.12);
+  --violet: #7c5cff;
+  --lime: #c7d40a;
+  --ink: #14141c;
+  --muted: #5b6478;
+  --line: #ece8f2;
   --gutter: clamp(20px, 4vw, 48px);
   --maxw: 1120px;
   min-height: 100dvh;
-  background: var(--plum-deep);
+  background: #fff;
   color: var(--ink);
   font-family: "Inter", system-ui, sans-serif;
   font-size: 17px;
@@ -67,7 +67,7 @@ html:has(.olv) body {
   justify-content: space-between;
   gap: 20px;
   padding: 18px var(--gutter);
-  background: color-mix(in srgb, var(--plum-deep) 78%, transparent);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
 }
@@ -79,7 +79,7 @@ html:has(.olv) body {
   color: var(--muted);
 }
 .olv-nav nav a:hover {
-  color: #fff;
+  color: var(--plum);
 }
 .olv-nav-cta {
   display: inline-flex;
@@ -98,6 +98,16 @@ html:has(.olv) body {
   overflow: hidden;
   min-height: calc(100dvh - 72px);
   padding: clamp(48px, 8vw, 100px) 0 clamp(64px, 8vw, 110px);
+  background:
+    radial-gradient(circle at 72% 42%, rgba(232, 176, 255, 0.22), transparent 28%),
+    linear-gradient(160deg, #4a1d6a 0%, var(--plum) 48%, var(--plum-deep) 100%);
+  color: #fff;
+}
+.olv-band {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1), transparent 24%),
+    linear-gradient(160deg, #4a1d6a 0%, var(--plum) 55%, var(--plum-deep) 100%);
+  color: #fff;
 }
 .olv-open-art {
   position: absolute;
@@ -172,7 +182,12 @@ html:has(.olv) body {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--lime);
+  color: var(--plum);
+}
+.olv-open .olv-kicker,
+.olv-band .olv-kicker,
+.olv-band .loop-kicker {
+  color: #e8fb2e;
 }
 .olv-title {
   margin-top: 16px;
@@ -198,7 +213,7 @@ html:has(.olv) body {
   max-width: 28ch;
   margin-top: 28px;
   font-size: clamp(18px, 2vw, 22px);
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.78);
 }
 .olv-scroll {
   display: inline-block;
@@ -223,7 +238,7 @@ html:has(.olv) body {
 }
 .olv-rule em {
   font-style: normal;
-  color: var(--lime);
+  color: var(--violet);
 }
 .olv-prose {
   max-width: 58ch;
@@ -234,7 +249,7 @@ html:has(.olv) body {
   margin-top: 18px;
 }
 .olv-prose strong {
-  color: #fff;
+  color: var(--plum);
   font-weight: 600;
 }
 
@@ -250,16 +265,17 @@ html:has(.olv) body {
   padding: 28px 24px;
   border: 1px solid var(--line);
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.04);
-  transition: background 0.2s, transform 0.2s;
+  background: #faf8fc;
+  transition: background 0.2s, transform 0.2s, border-color 0.2s;
 }
 .olv-pillar:hover {
-  background: rgba(255, 255, 255, 0.07);
+  background: #fff;
+  border-color: color-mix(in srgb, var(--violet) 35%, var(--line));
   transform: translateY(-4px);
 }
 .olv-pillar span {
   font-family: "Poppins", sans-serif;
-  color: var(--lime);
+  color: var(--violet);
   font-size: 13px;
 }
 .olv-pillar h3 {
@@ -273,10 +289,17 @@ html:has(.olv) body {
 }
 
 .olv .loop-stage-copy .loop-kicker {
-  color: var(--lime);
+  color: var(--plum);
+}
+.olv-band .loop-stage-copy .loop-kicker {
+  color: #e8fb2e;
 }
 .olv .loop-stage-copy h2,
 .olv .loop-beats h3 {
+  color: var(--ink);
+}
+.olv-band .loop-stage-copy h2,
+.olv-band .loop-beats h3 {
   color: #fff;
 }
 .olv .loop-human {
@@ -287,6 +310,9 @@ html:has(.olv) body {
 .olv .loop-rest {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  color: var(--muted);
+}
+.olv-band .loop-rest {
   color: rgba(255, 255, 255, 0.86);
 }
 .olv .loop-stage-copy p,
@@ -370,9 +396,17 @@ html:has(.olv) body {
   margin-top: 56px;
 }
 .olv .loop-beats article span {
-  color: var(--lime);
+  color: var(--violet);
   font-family: "Poppins", sans-serif;
   font-size: 13px;
+}
+.olv-band .loop-beats article span {
+  color: #e8fb2e;
+}
+.olv-band .loop-stage-copy p,
+.olv-band .loop-beats p,
+.olv-band .loop-hint {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .olv-signal {
@@ -382,7 +416,7 @@ html:has(.olv) body {
   padding: 28px 26px;
   border: 1px solid var(--line);
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.05);
+  background: #faf8fc;
 }
 .olv-signal::before {
   content: "";
@@ -397,7 +431,7 @@ html:has(.olv) body {
     radial-gradient(circle at 70% 70%, rgba(196, 160, 255, 0.45), transparent 46%);
 }
 .olv-signal .il {
-  color: var(--lime);
+  color: var(--plum);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -406,9 +440,10 @@ html:has(.olv) body {
 .olv-signal .ib {
   margin-top: 14px;
   font-size: 16px;
+  color: var(--muted);
 }
 .olv-signal .ib b {
-  color: #fff;
+  color: var(--ink);
 }
 .olv-signal .conf {
   display: flex;
@@ -420,16 +455,16 @@ html:has(.olv) body {
   flex: 1;
   height: 8px;
   border-radius: 99px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #ece8f2;
   overflow: hidden;
 }
 .olv-signal .conf-b {
   height: 100%;
   width: 91%;
-  background: linear-gradient(90deg, #7c5cff, var(--lime));
+  background: linear-gradient(90deg, var(--violet), #e8fb2e);
 }
 .olv-signal .conf-n {
-  color: var(--lime);
+  color: var(--plum);
   font-family: "Poppins", sans-serif;
 }
 .olv-actions {
@@ -449,19 +484,19 @@ html:has(.olv) body {
   font-weight: 600;
 }
 .olv-pop {
-  background: var(--lime);
-  color: #14141c;
+  background: var(--plum);
+  color: #fff;
 }
 .olv-float {
-  background: transparent;
-  color: #fff;
+  background: #fff;
+  color: var(--plum);
   border: 1px solid var(--line);
 }
 
 .olv .levy-chat {
   margin-top: 36px;
   max-width: 640px;
-  background: rgba(255, 255, 255, 0.05);
+  background: #faf8fc;
   border: 1px solid var(--line);
   border-radius: 24px;
   overflow: hidden;
@@ -473,12 +508,15 @@ html:has(.olv) body {
   padding: 16px 18px;
   border-bottom: 1px solid var(--line);
 }
+.olv .levy-head strong {
+  color: var(--ink);
+}
 .olv .levy-icon {
   display: grid;
   place-items: center;
   width: 28px;
   height: 28px;
-  color: var(--lime);
+  color: var(--plum);
 }
 .olv .levy-icon svg,
 .olv .levy-send svg {
@@ -496,7 +534,7 @@ html:has(.olv) body {
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--lime);
+  color: var(--plum);
   margin-bottom: 6px;
 }
 .olv .levy-msg p {
@@ -512,7 +550,7 @@ html:has(.olv) body {
   flex: 1;
   border: 0;
   background: transparent;
-  color: #fff;
+  color: var(--ink);
   font: inherit;
 }
 .olv .levy-send {
@@ -520,8 +558,8 @@ html:has(.olv) body {
   height: 40px;
   border: 0;
   border-radius: 50%;
-  background: var(--lime);
-  color: #14141c;
+  background: var(--plum);
+  color: #fff;
 }
 
 .olv-systems {
@@ -543,7 +581,8 @@ html:has(.olv) body {
   margin-top: 32px;
   padding: 28px;
   border-radius: 24px;
-  background: #fff;
+  background: #faf8fc;
+  border: 1px solid var(--line);
   color: #14141c;
 }
 .olv .demo-form h3 {
@@ -634,7 +673,7 @@ html:has(.olv) body {
   gap: 18px;
 }
 .olv-foot a:hover {
-  color: #fff;
+  color: var(--plum);
 }
 
 @keyframes olvFloat {

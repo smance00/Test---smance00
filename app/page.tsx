@@ -84,7 +84,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="olv-section" id="human-loop">
+        <section className="olv-section olv-band" id="human-loop">
           <div className="wrap">
             <LoopBubbles />
           </div>
