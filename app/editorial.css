@@ -537,6 +537,29 @@ html:has(.edh) body {
   color: var(--violet);
   letter-spacing: 0.02em;
 }
+.edh .platform-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 7px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: border-color 0.18s, color 0.18s, gap 0.18s;
+}
+.edh .platform-pill:hover {
+  border-color: var(--violet);
+  color: var(--violet);
+  gap: 12px;
+}
+.edh .platform-pill svg {
+  width: 14px;
+  height: 14px;
+}
 .edh .eg-copy h3 {
   font-size: clamp(21px, 2.4vw, 30px);
   font-weight: 600;
@@ -547,6 +570,9 @@ html:has(.edh) body {
   margin-top: 12px;
   color: var(--muted);
   max-width: 48ch;
+}
+.edh .eg-copy .textlink {
+  margin-top: 22px;
 }
 
 .edh .cx {

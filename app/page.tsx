@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
-import { CyclingWord } from "@/components/CyclingWord";
 import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
@@ -52,7 +51,7 @@ export default function HomePage() {
             </Link>
             <div className="nav-right">
               <nav className="nav-links" aria-label="Primary">
-                <a href="/#connect">Product</a>
+                <a href="/#platform">Product</a>
                 <a href="/#who">Who it&apos;s for</a>
                 <a href="/#learn">Intelligence</a>
                 <Link href="/blog">Blog</Link>
@@ -71,15 +70,14 @@ export default function HomePage() {
         <main>
           <section className="hero">
             <div className="container">
-              <p className="eyebrow reveal">Operational Intelligence Layer</p>
+              <p className="eyebrow reveal">Your AI Hiring Advisor</p>
               <h1 className="reveal">
-                The intelligence layer for the hiring you <span className="limeword" id="lime">already do</span>.
+                Make your next hire, the{" "}
+                <span className="limeword" id="lime">right hire</span>
               </h1>
-              <p className="hero-line2 reveal">
-                for teams that hire <CyclingWord />
-              </p>
               <p className="hero-sub prose reveal">
-                Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next. See where hiring slows, learn which signals predict great hires, and coach every manager with data, not opinions.
+                Olevy connects to the systems you already run via ATS and HRIS
+                systems to predict hiring success.
               </p>
               <div className="hero-cta reveal">
                 <a className="textlink" href={DEMO_MAIL}>
@@ -92,22 +90,24 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="sec" id="connect" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
+          <section className="sec" id="platform" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
             <div className="container">
               <div className="erow-grid reveal">
                 <div className="eg-copy">
-                  <span className="idx">01 · Connect</span>
-                  <h3>Start from the data you already have.</h3>
+                  <a className="platform-pill" href="/signals">
+                    Platform overview
+                    <ArrowIcon />
+                  </a>
+                  <h3>Turn people decisions into business strategy</h3>
                   <p>
-                    Olevy plugs into your existing ATS and enterprise systems and activates the data already sitting there — no migration, no cold start.
+                    Olevy connects hiring behavior, interview signals, and workforce
+                    outcomes to reveal what drives stronger hires. Give HR and hiring
+                    leaders the intelligence to improve decision quality, uncover
+                    hidden friction, and turn hiring into a measurable business lever.
                   </p>
-                  <div className="chips" style={{ marginTop: 18 }}>
-                    <span className="chip">Interview scorecards</span>
-                    <span className="chip">Hiring-manager feedback</span>
-                    <span className="chip">Performance reviews</span>
-                    <span className="chip">Candidate profiles</span>
-                    <span className="chip">Applications &amp; pipeline events</span>
-                  </div>
+                  <Link className="textlink" href="/signals">
+                    Learn More <ArrowIcon />
+                  </Link>
                 </div>
                 <WindowChrome url="olevy.app — Connections">
                   <div className="cx">
@@ -143,7 +143,7 @@ export default function HomePage() {
                         </svg>
                       </div>
                       <div className="hn">Olevy</div>
-                      <div className="hs">Operational intelligence layer</div>
+                      <div className="hs">Your AI Hiring Advisor</div>
                     </div>
                   </div>
                   <div className="flowchips">
