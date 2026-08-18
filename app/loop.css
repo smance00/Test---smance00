@@ -259,7 +259,7 @@ html:has(.olv) body {
   color: rgba(255, 255, 255, 0.86);
 }
 .olv-lede {
-  max-width: 28ch;
+  max-width: 42ch;
   margin-top: 28px;
   font-size: clamp(18px, 2vw, 22px);
   color: rgba(255, 255, 255, 0.78);
