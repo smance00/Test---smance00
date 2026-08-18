@@ -8,7 +8,7 @@ function formatCount(value: number, format: string | null) {
 
 export function EditorialFx() {
   useEffect(() => {
-    const root = document.querySelector(".edh");
+    const root = document.querySelector(".edh") || document.querySelector(".olv");
     if (!root) return;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

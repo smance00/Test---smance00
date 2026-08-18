@@ -3,6 +3,7 @@ import { Inter, Newsreader } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 import "./editorial.css";
+import "./loop.css";
 
 const inter = Inter({
   subsets: ["latin"],
