@@ -48,8 +48,8 @@ export default function SignalsPage() {
             </article>
           </div>
           <p className="reveal" style={{ marginTop: 48 }}>
-            <Link className="olv-nav-cta" href="/demo">
-              Book a demo
+            <Link className="olv-nav-cta" href="/#hero-request-demo">
+              Request a demo
             </Link>
           </p>
         </div>
