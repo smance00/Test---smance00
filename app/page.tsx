@@ -61,8 +61,10 @@ export default function HomePage() {
                   alt="A hiring leader considering a recommendation — the human who stays in the loop."
                 />
               </figure>
-              <HeroOrbs />
-              <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
+              <div className="olv-open-card">
+                <HeroOrbs />
+                <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
+              </div>
             </div>
           </div>
         </section>
