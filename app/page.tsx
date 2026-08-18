@@ -31,7 +31,7 @@ export default function HomePage() {
         <section className="olv-open">
           <figure className="olv-open-human">
             <img
-              src="/brand/human-in-the-loop.jpg"
+              src="/brand/human-in-the-loop.png"
               alt="A hiring leader considering a recommendation — the human who stays in the loop."
             />
           </figure>

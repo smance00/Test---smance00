@@ -118,24 +118,14 @@ html:has(.olv) body {
 }
 .olv-open-human img {
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: min(78%, 980px);
-  object-fit: cover;
-  object-position: right center;
-}
-.olv-open-human::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    var(--plum-deep) 0%,
-    rgba(42, 16, 64, 0.82) 28%,
-    rgba(42, 16, 64, 0.28) 46%,
-    transparent 62%
-  );
+  right: clamp(-16px, 1vw, 24px);
+  bottom: 0;
+  height: min(94%, 880px);
+  width: auto;
+  max-width: min(54vw, 640px);
+  object-fit: contain;
+  object-position: right bottom;
+  filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.28));
 }
 .olv-open-art {
   position: absolute;
@@ -774,16 +764,10 @@ html:has(.olv) body {
 
 @media (max-width: 800px) {
   .olv-open-human img {
-    width: 100%;
-    object-position: 78% center;
-  }
-  .olv-open-human::after {
-    background: linear-gradient(
-      180deg,
-      rgba(42, 16, 64, 0.18) 0%,
-      rgba(42, 16, 64, 0.55) 48%,
-      var(--plum-deep) 92%
-    );
+    right: -8%;
+    height: min(72%, 560px);
+    max-width: 78vw;
+    opacity: 0.92;
   }
   .olv-orb.a {
     right: 8%;
