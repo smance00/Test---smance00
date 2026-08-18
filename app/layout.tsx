@@ -3,6 +3,7 @@ import { Inter, Newsreader } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 import "./editorial.css";
+import "./loop.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,9 +18,9 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Olevy — Human in the Loop hiring intelligence",
+  title: "Olevy — Human in the Loop",
   description:
-    "Olevy floats AI hiring signals from the ATS and HRIS you already run. You stay in the loop: pop a recommendation to act, or let it float.",
+    "An AI Hiring Advisor that never closes the loop. Olevy floats the signal. You decide whether it pops.",
   applicationName: "Olevy",
   manifest: "/manifest.json",
   icons: {

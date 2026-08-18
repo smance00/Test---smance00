@@ -18,13 +18,13 @@ export function LoopBubbles() {
   return (
     <div className="loop-stage">
       <div className="loop-stage-copy">
-        <p className="loop-kicker">The idea</p>
+        <p className="loop-kicker">Try the loop</p>
         <h2>
-          <span className="loop-human">Human</span>
-          <span className="loop-rest">in the Loop</span>
+          <span className="loop-human">Pop one.</span>
+          <span className="loop-rest">Or let it float.</span>
         </h2>
         <p>
-          Olevy floats an AI signal — a recommendation, a risk, a coaching nudge. You stay in control: pop it to act, or let it float past.
+          Three live signals. Click a bubble to pop it. Click again to let it return. That is the whole product.
         </p>
       </div>
       <div className="loop-field" aria-label="AI signals you can pop or leave">

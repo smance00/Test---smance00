@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export function EditorialFx() {
   useEffect(() => {
-    const root = document.querySelector(".edh");
+    const root = document.querySelector(".olv") || document.querySelector(".edh");
     if (!root) return;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

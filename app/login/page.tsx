@@ -31,12 +31,12 @@ export default function LoginPage() {
         </Link>
         <div className="relative">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
-            Embedded Recruiter
+            Human in the Loop
           </p>
           <h1 className="mt-5 font-display text-5xl font-bold leading-[1.03] tracking-[-0.02em]">
-            Your hiring
+            AI floats
             <br />
-            operating system.
+            the hire.
           </h1>
           <p className="mt-5 max-w-md leading-relaxed text-white/80">
             Olevy combines talent discovery, hiring operations, and decision intelligence into one hiring workspace.

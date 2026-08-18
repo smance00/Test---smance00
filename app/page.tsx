@@ -1,289 +1,172 @@
-import Link from "next/link";
-import { BrandMark } from "@/components/BrandMark";
 import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
-import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { AskLevy } from "@/components/AskLevy";
 import { LoopBubbles } from "@/components/LoopBubbles";
-import { HiringSlowsCards } from "@/components/HiringSlowsCards";
-import { IntegrationsBand } from "@/components/IntegrationsBand";
-import { SiteFooter } from "@/components/SiteFooter";
-import { DEMO_MAIL } from "@/lib/utils";
-
-function ArrowIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M5 12h14M13 6l6 6-6 6" />
-    </svg>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <circle cx="10" cy="10" r="10" fill="currentColor" />
-      <path
-        d="M6 10.2 8.6 12.8 14 7.4"
-        stroke="#fff"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function WindowChrome({ url, children }: { url: string; children: React.ReactNode }) {
-  return (
-    <div className="win">
-      <div className="win-bar">
-        <span className="dots">
-          <i />
-          <i />
-          <i />
-        </span>
-        <span className="win-url">{url}</span>
-      </div>
-      {children}
-    </div>
-  );
-}
+import { LoopChrome } from "@/components/LoopChrome";
+import { LoopFooter } from "@/components/LoopFooter";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="min-h-dvh bg-bg text-fg">
+    <div className="olv">
       <EditorialFx />
-      <div className="edh">
-        <a className="announce" href="#request-demo">
-          <span className="announce-new">New</span>
-          <span className="announce-copy">
-            Human in the Loop — AI recommends. You decide.
-            <ArrowIcon />
-          </span>
-        </a>
-        <header className="nav">
-          <div className="container nav-in">
-            <Link className="logo" aria-label="Olevy home" href="/">
-              <BrandMark height={22} />
-            </Link>
-            <div className="nav-right">
-              <a className="nav-demo" href={DEMO_MAIL}>
-                Book a demo
-              </a>
-              <EditorialThemeToggle />
+      <LoopChrome />
+      <main>
+        <section className="olv-open">
+          <div className="olv-open-art" aria-hidden="true">
+            <span className="olv-orb a" />
+            <span className="olv-orb b" />
+            <span className="olv-orb c" />
+            <span className="olv-finger" />
+          </div>
+          <div className="wrap">
+            <p className="olv-kicker reveal">Olevy</p>
+            <h1 className="olv-title reveal">
+              <b>Human</b>
+              <i>in the Loop</i>
+            </h1>
+            <p className="olv-lede reveal">
+              AI can recommend the hire. Only a person should make it.
+            </p>
+            <span className="olv-scroll reveal">Scroll to enter the loop</span>
+          </div>
+        </section>
+
+        <section className="olv-section" id="rule">
+          <div className="wrap">
+            <h2 className="olv-rule reveal">
+              Every recommendation is a <em>bubble</em>.
+            </h2>
+            <p className="olv-prose reveal" style={{ marginTop: 28 }}>
+              Fragile. Temporary. Yours. Pop it, and the decision becomes real. Let it float, and the model learns that too.
+            </p>
+          </div>
+        </section>
+
+        <section className="olv-section tight" id="what">
+          <div className="wrap">
+            <p className="olv-kicker reveal">What this is</p>
+            <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)", maxWidth: "16ch" }}>
+              An AI Hiring Advisor that never closes the loop.
+            </h2>
+            <p className="olv-prose reveal" style={{ marginTop: 22 }}>
+              Olevy reads the ATS and HRIS you already run and floats signals about who will actually work out — from interview scorecards, manager notes, and the people you already hired.
+            </p>
+            <p className="olv-prose reveal">
+              It does not hire for you. It does not override a manager. It raises a bubble. <strong>You decide whether it pops.</strong>
+            </p>
+          </div>
+        </section>
+
+        <section className="olv-section tight" id="signals">
+          <div className="wrap">
+            <p className="olv-kicker reveal">The signals</p>
+            <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)" }}>
+              Three kinds of bubble.
+            </h2>
+            <div className="olv-pillars">
+              <Link className="olv-pillar reveal" href="/signals#quality">
+                <span>01</span>
+                <h3>Improve decision quality</h3>
+                <p>Which pre-hire signals actually predicted the people who stayed and grew — not the ones who looked good on paper.</p>
+              </Link>
+              <Link className="olv-pillar reveal" href="/signals#friction">
+                <span>02</span>
+                <h3>Find hidden funnel friction</h3>
+                <p>Where the loop slows, where Friday interviews fail, where one manager’s scores drift from the rest.</p>
+              </Link>
+              <Link className="olv-pillar reveal" href="/signals#alignment">
+                <span>03</span>
+                <h3>Strengthen team alignment</h3>
+                <p>Coaching that is not punitive. A nudge to the manager, in the moment, from the outcomes you already have.</p>
+              </Link>
             </div>
           </div>
-        </header>
+        </section>
 
-        <main>
-          <section className="hero">
-            <div className="container hero-split">
-              <div className="hero-copy">
-                <p className="eyebrow reveal">Human in the Loop</p>
-                <h1 className="reveal">
-                  Make your <span className="people-word">next hire</span>, the{" "}
-                  <span className="limeword" id="right-hire">
-                    right hire
-                  </span>
-                  .
-                </h1>
-                <p className="hero-sub reveal">
-                  Olevy floats the signal from the ATS and HRIS you already run. You choose whether to pop it — and make the hire.
-                </p>
-                <ul className="hero-points reveal">
-                  <li>
-                    <CheckIcon />
-                    Improve decision quality
-                  </li>
-                  <li>
-                    <CheckIcon />
-                    Find hidden funnel friction
-                  </li>
-                  <li>
-                    <CheckIcon />
-                    Strengthen team alignment
-                  </li>
-                </ul>
+        <section className="olv-section" id="human-loop">
+          <div className="wrap">
+            <LoopBubbles />
+          </div>
+        </section>
+
+        <section className="olv-section tight" id="moment">
+          <div className="wrap">
+            <p className="olv-kicker reveal">A live signal</p>
+            <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)", maxWidth: "14ch" }}>
+              This is the moment of choice.
+            </h2>
+            <div className="olv-signal reveal" style={{ marginTop: 32 }}>
+              <div className="il">A bubble just floated</div>
+              <p className="ib">
+                Over the last 24 months, candidates from non-traditional backgrounds on your team have shown <b>40% higher retention</b> with equal output. Consider advancing Candidate X for a technical screening loop.
+              </p>
+              <div className="conf">
+                <div className="conf-t">
+                  <div className="conf-b" />
+                </div>
+                <span className="conf-n">91%</span>
               </div>
+              <div className="olv-actions">
+                <button type="button" className="olv-pop">
+                  Pop — advance
+                </button>
+                <button type="button" className="olv-float">
+                  Let it float
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="olv-section tight" id="levy">
+          <div className="wrap">
+            <p className="olv-kicker reveal">Levy</p>
+            <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)", maxWidth: "16ch" }}>
+              Ask. Then you still decide.
+            </h2>
+            <p className="olv-prose reveal" style={{ marginTop: 18 }}>
+              Levy is the advisor in the loop — not a replacement for judgment. It answers from your real placements, then waits.
+            </p>
+            <div className="reveal">
+              <AskLevy />
+            </div>
+          </div>
+        </section>
+
+        <section className="olv-section tight" id="systems">
+          <div className="wrap">
+            <p className="olv-kicker reveal">Where bubbles come from</p>
+            <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)", maxWidth: "16ch" }}>
+              Your systems. Already running.
+            </h2>
+            <p className="olv-prose reveal" style={{ marginTop: 18 }}>
+              No migration. No cold start. Olevy activates interview scorecards, hiring-manager feedback, performance reviews, candidate profiles, and pipeline events.
+            </p>
+            <div className="olv-systems reveal">
+              <span>Greenhouse</span>
+              <span>Lever</span>
+              <span>Workday</span>
+              <span>BambooHR</span>
+              <span>Slack</span>
+              <span>Jira</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="olv-section" id="request-demo">
+          <div className="wrap">
+            <p className="olv-kicker reveal">Stay in the loop</p>
+            <h2 className="reveal" style={{ marginTop: 12, fontSize: "clamp(32px, 4vw, 48px)", maxWidth: "14ch" }}>
+              See the bubble. Then you choose.
+            </h2>
+            <div className="reveal">
               <DemoRequestForm />
             </div>
-          </section>
-
-          <section className="hero-video" aria-label="Product walkthrough">
-            <div className="container">
-              <div className="hero-video-frame reveal">
-                <iframe
-                  src="https://drive.google.com/file/d/1TwQzwMjdsJ8zWUOWZq10Gv9sRknfmTPi/preview"
-                  title="Olevy product walkthrough"
-                  allow="autoplay; encrypted-media; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </section>
-
-          <section className="loop-band" id="human-loop">
-            <div className="container">
-              <LoopBubbles />
-            </div>
-          </section>
-
-          <section className="sec" id="overview" style={{ paddingTop: "clamp(20px,3vw,40px)" }}>
-            <div className="container">
-              <div className="erow-grid reveal">
-                <div className="eg-copy">
-                  <a className="platform-pill" href="#overview">
-                    Platform Overview <ArrowIcon />
-                  </a>
-                  <h3>
-                    Improve <span className="people-word">decision quality</span>
-                  </h3>
-                  <p>
-                    Olevy connects hiring behavior, interview signals, and workforce outcomes to reveal what drives stronger hires. Give HR and hiring leaders the intelligence to improve decision quality, uncover hidden friction, and turn hiring into a measurable business lever.
-                  </p>
-                  <a className="textlink" href="#detect" style={{ marginTop: 22 }}>
-                    Learn More
-                  </a>
-                </div>
-                <WindowChrome url="olevy.app — Connections">
-                  <div className="cx">
-                    <div className="cx-col">
-                      <div className="src">
-                        <div className="k">ATS</div>
-                        <div className="sys">
-                          <span className="chip">Greenhouse</span>
-                          <span className="chip">Lever</span>
-                        </div>
-                      </div>
-                      <div className="src">
-                        <div className="k">HRIS</div>
-                        <div className="sys">
-                          <span className="chip">Workday</span>
-                          <span className="chip">BambooHR</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="cx-arrow">
-                      <ArrowIcon />
-                    </div>
-                    <div className="hub">
-                      <div className="hi">
-                        <svg viewBox="0 0 64 64" className="h-7 w-7" fill="none" aria-hidden="true">
-                          <path
-                            d="M28 12 h16 a8 8 0 0 1 8 8 v16"
-                            stroke="currentColor"
-                            strokeWidth="7"
-                            strokeLinecap="round"
-                          />
-                          <rect x="12" y="20" width="32" height="32" rx="10" stroke="currentColor" strokeWidth="7" />
-                        </svg>
-                      </div>
-                      <div className="hn">Olevy</div>
-                      <div className="hs">Your AI Hiring Advisor</div>
-                    </div>
-                  </div>
-                  <div className="flowchips">
-                    <div className="mock-lb">Data it activates</div>
-                    <div className="chips">
-                      <span className="chip"><i />Interview scorecards</span>
-                      <span className="chip"><i />Hiring-manager feedback</span>
-                      <span className="chip"><i />Performance reviews</span>
-                      <span className="chip"><i />Candidate profiles</span>
-                      <span className="chip"><i />Applications &amp; pipeline events</span>
-                    </div>
-                  </div>
-                </WindowChrome>
-              </div>
-            </div>
-          </section>
-
-          <section className="sec" id="detect" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <div className="friction-copy reveal">
-                <h3>Find hidden funnel friction.</h3>
-                <p>
-                  Predictive feature-engineering models isolate hidden process bottlenecks and track manager scoring variation — built to streamline the recruitment lifecycle and spot interview fatigue before it costs you a great candidate.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section className="sec" id="advisor" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <div className="friction-copy reveal">
-                <h3>Strengthen team alignment.</h3>
-                <p>
-                  Because Olevy runs on your existing ATS data, it cross-references your real hires — the ones already sourced and screened through your ATS and enterprise systems — and compares who actually succeeded against your future candidate profiles.
-                </p>
-                <p>
-                  Then it delivers real-time behavioral coaching widgets: non-punitive, data-backed guidance, directly to hiring managers.
-                </p>
-              </div>
-              <div className="advisor-band reveal">
-                <a className="platform-pill" href="#ask-levy">
-                  AI Advisor <ArrowIcon />
-                </a>
-                <h2>
-                  Stay <span className="people-word">in the loop</span> with your personal{" "}
-                  <span className="limeword swipe">AI Advisor</span>
-                </h2>
-                <p>
-                  Levy floats patterns across interviews, manager behavior, and hiring outcomes. You pop the ones that matter — and leave the rest. The human always decides.
-                </p>
-                <a className="textlink advisor-cta" href="#ask-levy">
-                  Meet the advisor <ArrowIcon />
-                </a>
-                <AskLevy />
-              </div>
-              <HiringSlowsCards />
-            </div>
-          </section>
-
-          <section className="sec" id="integrations" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <IntegrationsBand />
-            </div>
-          </section>
-
-          <section className="sec" style={{ paddingTop: 0 }}>
-            <div className="container">
-              <div className="insight insight-bubble reveal" style={{ marginTop: 0 }}>
-                <span className="il">
-                  <i />
-                  A signal just floated
-                </span>
-                <p className="ib">
-                  Over the last 24 months, candidates from non-traditional backgrounds on your team have shown <b>40% higher retention</b> with equal output. Consider advancing Candidate X for a technical screening loop.
-                </p>
-                <div className="conf">
-                  <div className="conf-t">
-                    <div className="conf-b" style={{ ["--c" as string]: 0.91 }} />
-                  </div>
-                  <span className="conf-n">91%</span>
-                </div>
-                <div className="iact">
-                  <button type="button" className="pill-primary">
-                    Pop — advance
-                  </button>
-                  <button type="button" className="pill-ghost">
-                    Let it float
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-
-        </main>
-      </div>
-      <SiteFooter variant="home" />
+          </div>
+        </section>
+      </main>
+      <LoopFooter />
     </div>
   );
 }
