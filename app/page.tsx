@@ -43,7 +43,7 @@ export default function HomePage() {
               <i>in the Loop</i>
             </h1>
             <p className="olv-lede reveal">
-              AI can recommend the hire. Only a person should make it.
+              Olevy helps hiring teams make better decisions by turning hiring data into clear insights, spotting risk, and guiding managers in the moment.
             </p>
             <ul className="olv-points reveal">
               <li>
