@@ -29,7 +29,7 @@ export default function HomePage() {
       <LoopChrome />
       <main>
         <section className="olv-open">
-          <div className="wrap">
+          <div className="wrap olv-open-grid">
             <div className="olv-open-copy">
               <p className="olv-kicker reveal">Olevy</p>
               <h1 className="olv-title reveal">

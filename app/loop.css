@@ -109,11 +109,18 @@ html:has(.olv) body {
     linear-gradient(160deg, #4a1d6a 0%, var(--plum) 55%, var(--plum-deep) 100%);
   color: #fff;
 }
+.olv-open .wrap.olv-open-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 1.05fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  max-width: 1240px;
+}
 .olv-open-copy {
   position: relative;
   z-index: 2;
-  max-width: 40rem;
-  margin-bottom: clamp(28px, 4vw, 48px);
+  max-width: 36rem;
+  margin-bottom: 0;
 }
 .olv-open-stage {
   position: relative;
@@ -801,6 +808,9 @@ html:has(.olv) body {
 }
 
 @media (max-width: 800px) {
+  .olv-open .wrap.olv-open-grid {
+    grid-template-columns: 1fr;
+  }
   .olv-open-stage {
     min-height: 520px;
   }
