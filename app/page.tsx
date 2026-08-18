@@ -27,7 +27,7 @@ export default function HomePage() {
       <LoopChrome />
       <main>
         <section className="olv-open">
-          <div className="olv-open-block">
+          <div className="wrap olv-open-block">
             <div className="olv-open-copy">
               <p className="olv-kicker reveal">AI Hiring Advisor</p>
               <h1 className="olv-title reveal">
@@ -51,14 +51,8 @@ export default function HomePage() {
                   Strengthen team alignment
                 </li>
               </ul>
-              <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
             </div>
-            <figure className="olv-halo reveal vis">
-              <img
-                src="/brand/halo-leader-cutout.png"
-                alt="A hiring leader — the person who still makes the call."
-              />
-            </figure>
+            <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
           </div>
         </section>
 
