@@ -109,29 +109,43 @@ html:has(.olv) body {
     linear-gradient(160deg, #4a1d6a 0%, var(--plum) 55%, var(--plum-deep) 100%);
   color: #fff;
 }
+.olv-open-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: center;
+}
+.olv-open-copy {
+  position: relative;
+  z-index: 2;
+}
+.olv-open-stage {
+  position: relative;
+  min-height: 560px;
+  padding: 88px 0 8px;
+}
 .olv-open-human {
   position: absolute;
-  inset: 0;
+  right: -22%;
+  bottom: 0;
+  width: 92%;
+  height: 100%;
   margin: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 .olv-open-human img {
   position: absolute;
-  right: clamp(-16px, 1vw, 24px);
+  right: 0;
   bottom: 0;
-  height: min(94%, 880px);
+  height: 112%;
   width: auto;
-  max-width: min(54vw, 640px);
+  max-width: none;
   object-fit: contain;
   object-position: right bottom;
+  transform: scaleX(-1);
+  transform-origin: right bottom;
   filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.28));
-}
-.olv-open-art {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
 }
 .olv-orb {
   position: absolute;
@@ -167,47 +181,43 @@ html:has(.olv) body {
     transform: scale(1.4);
   }
 }
-.olv-orb.a {
-  width: min(18vw, 160px);
-  height: min(18vw, 160px);
-  right: 42%;
-  top: 14%;
+.olv-orb.brand {
+  left: -18px;
+  top: 28px;
+  z-index: 3;
+  width: min(28vw, 148px);
+  height: min(28vw, 148px);
+  display: grid;
+  place-items: center;
   background:
-    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.75), transparent 26%),
-    radial-gradient(circle at 70% 68%, rgba(196, 160, 255, 0.5), transparent 44%),
-    radial-gradient(circle at 40% 80%, rgba(232, 251, 46, 0.22), transparent 40%),
-    rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.25), 0 30px 80px rgba(0, 0, 0, 0.25);
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.8), transparent 26%),
+    radial-gradient(circle at 70% 68%, rgba(196, 160, 255, 0.45), transparent 44%),
+    radial-gradient(circle at 40% 80%, rgba(232, 251, 46, 0.18), transparent 40%),
+    rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.28), 0 24px 50px rgba(0, 0, 0, 0.28);
   animation: olvFloat 7s ease-in-out infinite;
 }
-.olv-orb.b {
-  width: 110px;
-  height: 110px;
-  right: 26%;
-  top: 6%;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.7), transparent 28%),
-    rgba(181, 156, 255, 0.28);
-  animation: olvFloat 6s ease-in-out infinite -2s;
+.olv-orb-sheen {
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.55), transparent 42%);
+  pointer-events: none;
 }
-.olv-orb.c {
-  width: 72px;
-  height: 72px;
-  right: 8%;
-  bottom: 12%;
-  top: auto;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.65), transparent 28%),
-    rgba(232, 251, 46, 0.2);
-  animation: olvFloat 8s ease-in-out infinite -3.5s;
+.olv-orb-logo {
+  position: relative;
+  width: 46%;
+  height: auto;
+  opacity: 0.38;
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 .olv-open .wrap {
   position: relative;
   z-index: 2;
-  pointer-events: none;
 }
-.olv-open .wrap > * {
-  pointer-events: auto;
+.olv-open .olv-title b {
+  font-size: clamp(52px, 8vw, 96px);
 }
 .olv-kicker {
   font-size: 12px;
@@ -652,6 +662,34 @@ html:has(.olv) body {
   color: var(--muted);
 }
 
+.olv-hero-form,
+.olv-open .demo-form.olv-hero-form {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 380px);
+  max-width: 380px;
+  margin-top: 0;
+  padding: 22px 22px 18px;
+  background: #fff;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
+}
+.olv-open .olv-hero-form h3 {
+  font-size: 22px;
+}
+.olv-open .olv-hero-form .demo-form-lead {
+  margin: 6px 0 16px;
+  font-size: 13px;
+}
+.olv-open .olv-hero-form label {
+  margin-bottom: 10px;
+}
+.olv-open .olv-hero-form input {
+  padding: 10px 12px;
+}
+.olv-open .olv-hero-form .demo-submit {
+  padding: 12px;
+}
+
 .olv .demo-form {
   max-width: 420px;
   margin-top: 32px;
@@ -763,15 +801,25 @@ html:has(.olv) body {
 }
 
 @media (max-width: 800px) {
-  .olv-open-human img {
-    right: -8%;
-    height: min(72%, 560px);
-    max-width: 78vw;
-    opacity: 0.92;
+  .olv-open-grid {
+    grid-template-columns: 1fr;
   }
-  .olv-orb.a {
-    right: 8%;
-    top: 10%;
+  .olv-open-stage {
+    min-height: 520px;
+    padding-top: 72px;
+  }
+  .olv-open-human {
+    right: -12%;
+    width: 78%;
+  }
+  .olv-open-human img {
+    height: 96%;
+    opacity: 0.94;
+  }
+  .olv-orb.brand {
+    left: auto;
+    right: 12%;
+    top: 8px;
   }
   .olv-nav nav a:not(.olv-nav-cta) {
     display: none;

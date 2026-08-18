@@ -3,7 +3,13 @@
 import { FormEvent, useState } from "react";
 import { isValidEmail } from "@/lib/utils";
 
-export function DemoRequestForm() {
+export function DemoRequestForm({
+  className = "",
+  id = "request-demo",
+}: {
+  className?: string;
+  id?: string;
+}) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,7 +39,7 @@ export function DemoRequestForm() {
 
   if (sent) {
     return (
-      <div className="demo-form reveal vis">
+      <div className={`demo-form reveal vis ${className}`.trim()}>
         <h3>We&apos;ll be in touch.</h3>
         <p className="demo-form-lead">
           Your request is ready to send. If your mail app didn&apos;t open, email{" "}
@@ -44,7 +50,7 @@ export function DemoRequestForm() {
   }
 
   return (
-    <form className="demo-form reveal" onSubmit={onSubmit} id="request-demo">
+    <form className={`demo-form reveal ${className}`.trim()} onSubmit={onSubmit} id={id}>
       <h3>Request a demo</h3>
       <p className="demo-form-lead">Schedule a 30-minute product demo with a real, live person.</p>
       <label>
