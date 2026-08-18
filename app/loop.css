@@ -1,6 +1,6 @@
 html:has(.olv),
 html:has(.olv) body {
-  background: #f3f1ec;
+  background: #f4f4f5;
   color: #14141c;
 }
 
@@ -10,9 +10,9 @@ html:has(.olv) body {
   --violet: #7c5cff;
   --lime: #c7d40a;
   --ink: #14141c;
-  --muted: #5b6478;
-  --line: #e6e1d8;
-  --paper: #f3f1ec;
+  --muted: #5c5f66;
+  --line: #e4e4e7;
+  --paper: #f4f4f5;
   --gutter: clamp(20px, 4vw, 48px);
   --maxw: 1120px;
   min-height: 100dvh;
@@ -98,7 +98,7 @@ html:has(.olv) body {
 .olv-open {
   position: relative;
   overflow: hidden;
-  padding: clamp(56px, 8vw, 104px) 0 clamp(72px, 10vw, 128px);
+  padding: clamp(24px, 4vw, 40px) 0 clamp(48px, 6vw, 72px);
   background: var(--paper);
   color: var(--ink);
 }
@@ -108,30 +108,40 @@ html:has(.olv) body {
     linear-gradient(160deg, #4a1d6a 0%, var(--plum) 55%, var(--plum-deep) 100%);
   color: #fff;
 }
-.olv-open .wrap.olv-open-grid {
+.olv-open-block {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.18fr);
-  gap: clamp(40px, 7vw, 88px);
-  align-items: start;
-  max-width: 1200px;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(260px, 1.05fr);
+  grid-template-areas:
+    "copy photo"
+    "form photo";
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: min(680px, calc(100dvh - 112px));
 }
 .olv-open-copy {
+  grid-area: copy;
   position: relative;
   z-index: 2;
-  max-width: 34rem;
-  padding-bottom: 12px;
+  max-width: none;
+  padding: 36px 36px 8px;
 }
 .olv-halo {
+  grid-area: photo;
   position: relative;
   z-index: 1;
   margin: 0;
   overflow: hidden;
-  background: var(--paper);
+  min-height: 100%;
+  background: #eef0f2;
 }
 .olv-halo img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 55% 18%;
 }
 .olv-textlink {
   display: inline-block;
@@ -285,8 +295,20 @@ html:has(.olv) body {
   z-index: 2;
 }
 .olv-open .olv-title b {
-  font-size: clamp(36px, 5.4vw, 64px);
+  font-size: clamp(28px, 3.4vw, 44px);
   color: var(--ink);
+}
+.olv-open .olv-title i {
+  font-size: clamp(18px, 2.1vw, 26px);
+}
+.olv-open .olv-lede {
+  max-width: 40ch;
+  margin-top: 14px;
+  font-size: 16px;
+}
+.olv-open .olv-points {
+  margin-top: 18px;
+  gap: 8px;
 }
 .olv-kicker {
   font-size: 12px;
@@ -825,14 +847,18 @@ html:has(.olv) body {
 
 .olv-hero-form,
 .olv-open .demo-form.olv-hero-form {
+  grid-area: form;
   position: relative;
   z-index: 2;
-  width: min(100%, 360px);
-  max-width: 360px;
-  margin-top: 28px;
-  padding: 28px 26px 22px;
-  background: #fff;
+  width: 100%;
+  max-width: none;
+  margin-top: 0;
+  padding: 12px 36px 32px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   box-shadow: none;
+  align-self: end;
 }
 .olv-open .olv-hero-form h3 {
   font-size: 22px;
@@ -980,8 +1006,21 @@ html:has(.olv) body {
 }
 
 @media (max-width: 800px) {
-  .olv-open .wrap.olv-open-grid {
+  .olv-open-block {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "form"
+      "photo";
+    min-height: 0;
+  }
+  .olv-halo {
+    min-height: 320px;
+  }
+  .olv-open-copy,
+  .olv-open .demo-form.olv-hero-form {
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .olv-nav nav a:not(.olv-nav-cta) {
     display: none;
