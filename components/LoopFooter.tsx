@@ -1,12 +1,13 @@
 import Link from "next/link";
+import { DEMO_MAIL } from "@/lib/utils";
 
 export function LoopFooter() {
   return (
     <footer className="foot">
-      <p>Olevy — AI Hiring Advisor.</p>
+      <p>Olevy — The operational intelligence layer for hiring.</p>
       <nav>
-        <Link href="/#hero-request-demo">Request a demo</Link>
-        <Link href="/blog">Notes</Link>
+        <a href={DEMO_MAIL}>Book a demo</a>
+        <Link href="/blog">Blog</Link>
         <a href="mailto:info@joinolevy.com">info@joinolevy.com</a>
       </nav>
     </footer>

@@ -32,7 +32,7 @@ export function EditorialFx() {
       observer.observe(el);
     });
 
-    const limes = root.querySelectorAll(".limeword");
+    const limes = root.querySelectorAll(".limeword, #lime");
     const limeTimer = window.setTimeout(() => {
       limes.forEach((el) => el.classList.add("swipe"));
     }, 400);

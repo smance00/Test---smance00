@@ -1,6 +1,6 @@
 # Olevy
 
-A copy of [olevy.ai](https://olevy.ai) — the operational intelligence layer for hiring.
+A copy of the [olevy.ai](https://olevy.ai) marketing homepage — the operational intelligence layer for hiring.
 
 Olevy connects to the ATS and enterprise systems you already run, maps pre-hire signals to post-hire outcomes, and coaches hiring managers with data instead of opinions.
 
