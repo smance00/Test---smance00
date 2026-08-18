@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Concept — Olevy",
-  description: "Human in the Loop: AI floats the hire. You decide if it pops.",
+  description: "This cycle’s idea: the model recommends, a person remains the decision.",
 };
 
 export default function ConceptPage() {
@@ -23,13 +23,13 @@ export default function ConceptPage() {
             in the Loop
           </h1>
           <p className="olv-prose reveal">
-            Most hiring software tries to finish the sentence for you. Rank the candidate. Advance the stage. Close the req. The loop snaps shut, and the person who has to live with the hire is no longer in it.
+            Most hiring software tries to finish the sentence for you. Rank the candidate. Advance the stage. Close the req. The person who has to live with the hire is no longer in it.
           </p>
           <p className="olv-prose reveal">
             Olevy is built the other way. The model is allowed to be certain. The human is required to be present.
           </p>
           <p className="olv-prose reveal">
-            This cycle we are talking about that as Human in the Loop — a campaign idea, not the product itself. The product is an AI Hiring Advisor on the ATS and HRIS you already run. It surfaces decision quality, hidden funnel friction, and team alignment. A person still makes the call.
+            This cycle we call that Human in the Loop — a campaign, not the product name. The product is an AI Hiring Advisor on the ATS and HRIS you already run. It surfaces decision quality, hidden funnel friction, and team alignment. A person still makes the call.
           </p>
           <p className="olv-prose reveal">
             Next year the language may change. The job will not: recommend, then wait. Never hire on someone&apos;s behalf.

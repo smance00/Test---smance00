@@ -5,9 +5,9 @@ export function LoopFooter() {
     <footer className="olv-foot">
       <p>Olevy — Human in the Loop.</p>
       <nav>
-        <Link href="/#overview">Product</Link>
+        <Link href="/concept">Concept</Link>
         <Link href="/signals">Signals</Link>
-        <Link href="/concept">This cycle</Link>
+        <Link href="/#levy">Advisor</Link>
         <Link href="/demo">Demo</Link>
         <Link href="/blog">Notes</Link>
         <a href="mailto:info@joinolevy.com">info@joinolevy.com</a>

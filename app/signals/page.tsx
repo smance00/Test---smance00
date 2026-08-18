@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Signals — Olevy",
-  description: "The three bubbles Olevy floats: decision quality, hidden friction, team alignment.",
+  description: "What Olevy surfaces: decision quality, hidden funnel friction, and team alignment.",
 };
 
 export default function SignalsPage() {
@@ -26,14 +26,14 @@ export default function SignalsPage() {
               <p className="olv-kicker">01</p>
               <h2>Improve decision quality</h2>
               <p>
-                The pedigree trap is a bubble that looks solid. Olevy maps pre-hire signals — a take-home score, a culture note, a school — to who was still on the team eighteen months later, and who was fast-tracked. The next shortlist is built on who worked out, not who photographed well.
+                Olevy maps pre-hire signals — a take-home score, a culture note, a school — to who was still on the team eighteen months later, and who was fast-tracked. The next shortlist is built on who worked out, not who photographed well.
               </p>
             </article>
             <article id="friction" className="reveal">
               <p className="olv-kicker">02</p>
               <h2>Find hidden funnel friction</h2>
               <p>
-                Loops lengthen. Friday interviews reject. One manager scores a point and a half below the rest. These are not dashboards. They are bubbles that appear before a great candidate is gone. You pop the flag, or you let the week continue. Either way, you saw it.
+                Interview loops lengthen. Friday interviews reject. One manager scores a point and a half below the rest. Olevy flags that before a great candidate is gone. You act on it, or you don’t. Either way, you saw it.
               </p>
             </article>
             <article id="alignment" className="reveal">

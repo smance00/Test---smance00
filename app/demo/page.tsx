@@ -17,9 +17,9 @@ export default function DemoPage() {
       <main className="olv-page">
         <div className="wrap">
           <p className="olv-kicker reveal">Demo</p>
-          <h1 className="reveal">See the bubble. Then you choose.</h1>
+          <h1 className="reveal">See it on a process like yours.</h1>
           <p className="olv-prose reveal">
-            Thirty minutes with a person — not a recording. We will float a signal from a hiring process like yours, and leave the pop to you.
+            Thirty minutes with a person — not a recording. We walk a hiring process like yours and leave the decision with you.
           </p>
           <div className="reveal">
             <DemoRequestForm />

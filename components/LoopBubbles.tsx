@@ -9,58 +9,58 @@ const SIGNALS = [
 ];
 
 export function LoopBubbles() {
-  const [popped, setPopped] = useState<Record<string, boolean>>({});
+  const [acted, setActed] = useState<Record<string, boolean>>({});
 
   function toggle(id: string) {
-    setPopped((current) => ({ ...current, [id]: !current[id] }));
+    setActed((current) => ({ ...current, [id]: !current[id] }));
   }
 
   return (
     <div className="loop-stage">
       <div className="loop-stage-copy">
-        <p className="loop-kicker">Try the loop</p>
+        <p className="loop-kicker">In practice</p>
         <h2>
-          <span className="loop-human">Pop one.</span>
-          <span className="loop-rest">Or let it float.</span>
+          <span className="loop-human">A recommendation.</span>
+          <span className="loop-rest">Then a person.</span>
         </h2>
         <p>
-          Three live signals. Click a bubble to pop it. Click again to let it return. That is the whole product.
+          Three examples from a hiring process. Act on one, or leave it. The model notices either way.
         </p>
       </div>
-      <div className="loop-field" aria-label="AI signals you can pop or leave">
+      <div className="loop-field" aria-label="Example hiring recommendations">
         {SIGNALS.map((signal, index) => {
-          const gone = Boolean(popped[signal.id]);
+          const done = Boolean(acted[signal.id]);
           return (
             <button
               key={signal.id}
               type="button"
-              className={`loop-bubble b${index + 1} ${gone ? "popped" : ""}`}
+              className={`loop-bubble b${index + 1} ${done ? "popped" : ""}`}
               onClick={() => toggle(signal.id)}
-              aria-pressed={gone}
+              aria-pressed={done}
             >
               <span className="loop-sheen" aria-hidden="true" />
               <span className="loop-bubble-label">{signal.label}</span>
-              <span className="loop-bubble-hint">{gone ? "Popped — you acted" : signal.hint}</span>
+              <span className="loop-bubble-hint">{done ? "Acted" : signal.hint}</span>
             </button>
           );
         })}
-        <p className="loop-hint">Click a bubble to pop it. Click again to let it return.</p>
+        <p className="loop-hint">Click a recommendation to act. Click again to undo.</p>
       </div>
       <div className="loop-beats">
         <article>
           <span>01</span>
-          <h3>AI floats the signal</h3>
-          <p>Levy raises a recommendation from ATS and HRIS data you already have.</p>
+          <h3>Olevy surfaces a signal</h3>
+          <p>A recommendation from the ATS and HRIS data you already have.</p>
         </article>
         <article>
           <span>02</span>
           <h3>You decide</h3>
-          <p>Pop it to act — advance, flag, or coach — or let it float. The human stays in the loop.</p>
+          <p>Advance, flag, coach — or dismiss. The hiring manager stays in control.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>The next bubble learns</h3>
-          <p>Your choice feeds the model, so the next signal is sharper and still yours to pop.</p>
+          <h3>The model learns</h3>
+          <p>Your choice feeds the next recommendation, still yours to accept or ignore.</p>
         </article>
       </div>
     </div>
