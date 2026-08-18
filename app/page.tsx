@@ -27,40 +27,38 @@ export default function HomePage() {
       <LoopChrome />
       <main>
         <section className="olv-open">
-          <div className="wrap">
-            <div className="olv-open-block">
-              <div className="olv-open-copy">
-                <p className="olv-kicker reveal">AI Hiring Advisor</p>
-                <h1 className="olv-title reveal">
-                  <b>Better hiring decisions.</b>
-                  <i>A person still makes the call.</i>
-                </h1>
-                <p className="olv-lede reveal">
-                  Olevy turns the ATS and HRIS you already run into clear insight, spots risk in the funnel, and guides managers in the moment.
-                </p>
-                <ul className="olv-points reveal">
-                  <li>
-                    <CheckIcon />
-                    Improve decision quality
-                  </li>
-                  <li>
-                    <CheckIcon />
-                    Find hidden funnel friction
-                  </li>
-                  <li>
-                    <CheckIcon />
-                    Strengthen team alignment
-                  </li>
-                </ul>
-              </div>
+          <div className="olv-open-block">
+            <div className="olv-open-copy">
+              <p className="olv-kicker reveal">AI Hiring Advisor</p>
+              <h1 className="olv-title reveal">
+                <b>Better hiring decisions.</b>
+                <i>A person still makes the call.</i>
+              </h1>
+              <p className="olv-lede reveal">
+                Olevy turns the ATS and HRIS you already run into clear insight, spots risk in the funnel, and guides managers in the moment.
+              </p>
+              <ul className="olv-points reveal">
+                <li>
+                  <CheckIcon />
+                  Improve decision quality
+                </li>
+                <li>
+                  <CheckIcon />
+                  Find hidden funnel friction
+                </li>
+                <li>
+                  <CheckIcon />
+                  Strengthen team alignment
+                </li>
+              </ul>
               <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
-              <figure className="olv-halo reveal">
-                <img
-                  src="/brand/halo-leader.png"
-                  alt="A hiring leader — the person who still makes the call."
-                />
-              </figure>
             </div>
+            <figure className="olv-halo reveal vis">
+              <img
+                src="/brand/halo-leader.png"
+                alt="A hiring leader — the person who still makes the call."
+              />
+            </figure>
           </div>
         </section>
 
