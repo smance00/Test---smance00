@@ -132,17 +132,34 @@ html:has(.olv) body {
 .olv-halo {
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   margin: 0;
   overflow: hidden;
   min-height: calc(100dvh - 72px);
-  background: #eef0f2;
+  background: transparent;
+}
+.olv-halo::before {
+  content: "";
+  position: absolute;
+  width: min(78%, 540px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #8b5aad;
+  top: 10%;
+  right: 10%;
+  z-index: 0;
 }
 .olv-halo img {
+  position: relative;
+  z-index: 1;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 55% 18%;
+  width: auto;
+  height: 94%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom center;
 }
 .olv-textlink {
   display: inline-block;
@@ -1014,8 +1031,11 @@ html:has(.olv) body {
     grid-template-columns: 1fr;
   }
   .olv-halo {
-    min-height: 56vw;
-    max-height: 420px;
+    min-height: 420px;
+    max-height: none;
+  }
+  .olv-halo img {
+    height: 400px;
   }
   .olv-open-copy {
     max-width: none;

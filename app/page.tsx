@@ -55,7 +55,7 @@ export default function HomePage() {
             </div>
             <figure className="olv-halo reveal vis">
               <img
-                src="/brand/halo-leader.png"
+                src="/brand/halo-leader-cutout.png"
                 alt="A hiring leader — the person who still makes the call."
               />
             </figure>
