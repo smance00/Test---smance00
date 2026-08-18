@@ -1,4 +1,5 @@
 import { DemoRequestForm } from "@/components/DemoRequestForm";
+import { ProductVideo } from "@/components/ProductVideo";
 import { EditorialFx } from "@/components/EditorialFx";
 import { AskLevy } from "@/components/AskLevy";
 import { HeroOrbs } from "@/components/HeroOrbs";
@@ -105,14 +106,7 @@ export default function HomePage() {
         <div className="edh olv-body">
           <section className="hero-video" aria-label="Product walkthrough">
             <div className="container">
-              <div className="hero-video-frame reveal">
-                <iframe
-                  src="https://drive.google.com/file/d/1TwQzwMjdsJ8zWUOWZq10Gv9sRknfmTPi/preview"
-                  title="Olevy product walkthrough"
-                  allow="autoplay; encrypted-media; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
+              <ProductVideo />
             </div>
           </section>
 
