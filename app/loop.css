@@ -758,6 +758,7 @@ html:has(.olv) body {
     transform: none;
   }
   .olv-orb,
+  .olv-orb.popped,
   .olv .loop-bubble {
     animation: none;
   }
