@@ -34,7 +34,7 @@ export default function HomePage() {
                 <i>A person still makes the call.</i>
               </h1>
               <p className="olv-lede reveal">
-                Olevy turns the ATS and HRIS you already run into clear insight, spots risk in the funnel, and guides managers in the moment.
+                Olevy is the intelligence layer for the hiring you already do. It reads the ATS and HRIS you run, spots risk in the funnel, and coaches managers in the moment.
               </p>
               <ul className="olv-points reveal">
                 <li>
@@ -55,49 +55,97 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="olv-section" id="product">
+        <section className="olv-section" id="connect">
+          <div className="wrap olv-split">
+            <div>
+              <p className="olv-kicker reveal">01 · Connect</p>
+              <h2 className="olv-body-h2 reveal">Start from the data you already have.</h2>
+              <p className="olv-prose reveal" style={{ marginTop: 18 }}>
+                Olevy plugs into Greenhouse, Lever, Workday, and BambooHR. Scorecards, manager feedback, reviews, pipeline events — no migration, no cold start.
+              </p>
+            </div>
+            <aside className="olv-panel reveal">
+              <p className="olv-panel-kicker">Already running</p>
+              <div className="olv-connect">
+                <div>
+                  <span>ATS</span>
+                  <b>Greenhouse</b>
+                  <b>Lever</b>
+                </div>
+                <div>
+                  <span>HRIS</span>
+                  <b>Workday</b>
+                  <b>BambooHR</b>
+                </div>
+              </div>
+              <p className="olv-panel-note">Olevy reads the signal. A person makes the call.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section className="olv-section tight" id="detect">
           <div className="wrap">
-            <p className="olv-kicker reveal">Product</p>
-            <h2 className="olv-body-h2 reveal">Intelligence on the hiring you already do.</h2>
+            <p className="olv-kicker reveal">02 · Detect</p>
+            <h2 className="olv-body-h2 reveal">Find the friction you can&apos;t see.</h2>
             <p className="olv-prose reveal" style={{ marginTop: 18 }}>
-              Olevy reads Greenhouse, Lever, Workday, and BambooHR — scorecards, manager feedback, reviews, pipeline events — and maps those signals to what actually happened next. It surfaces the call. It does not take it.
+              Where loops slow, where Friday interviews fail, where one manager’s scores drift. Olevy flags it before a great candidate is gone.
             </p>
-            <ol className="olv-lines">
-              <li className="reveal">
+            <div className="olv-pillars">
+              <Link className="olv-pillar reveal" href="/signals#quality">
                 <span>01</span>
-                <div>
-                  <h3>
-                    <Link href="/signals#quality">Improve decision quality</Link>
-                  </h3>
-                  <p>Which pre-hire signals predicted the people who stayed and grew — not the ones who looked good on paper.</p>
-                </div>
-              </li>
-              <li className="reveal">
+                <h3>Decision quality</h3>
+                <p>Which pre-hire signals predicted the people who stayed and grew — not the ones who looked good on paper.</p>
+              </Link>
+              <Link className="olv-pillar reveal" href="/signals#friction">
                 <span>02</span>
-                <div>
-                  <h3>
-                    <Link href="/signals#friction">Find hidden funnel friction</Link>
-                  </h3>
-                  <p>Where the process slows, where Friday interviews fail, where one manager’s scores drift from the rest.</p>
-                </div>
-              </li>
-              <li className="reveal">
+                <h3>Funnel friction</h3>
+                <p>Interview fatigue, process drift, and the bottlenecks that cost you people you wanted.</p>
+              </Link>
+              <Link className="olv-pillar reveal" href="/signals#alignment">
                 <span>03</span>
-                <div>
-                  <h3>
-                    <Link href="/signals#alignment">Strengthen team alignment</Link>
-                  </h3>
-                  <p>A nudge to the manager, in the moment, from the outcomes you already have. Coaching, not a scolding.</p>
+                <h3>Team alignment</h3>
+                <p>A nudge to the manager, in the moment, from the outcomes you already have.</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="olv-section tight" id="coach">
+          <div className="wrap olv-split">
+            <div>
+              <p className="olv-kicker reveal">03 · Coach</p>
+              <h2 className="olv-body-h2 reveal">A recommendation. Then a person.</h2>
+              <p className="olv-prose reveal" style={{ marginTop: 18 }}>
+                The model can flag a candidate, a Friday pattern, or a manager’s drift. Advance, dismiss, or coach — the hiring manager stays in control.
+              </p>
+            </div>
+            <div className="olv-signal reveal">
+              <div className="il">Data insight</div>
+              <p className="ib">
+                Over the last 24 months, candidates from non-traditional backgrounds on your team have shown <b>40% higher retention</b> with equal output. Consider advancing Candidate X for a technical screening loop.
+              </p>
+              <div className="conf">
+                <div className="conf-t">
+                  <div className="conf-b" />
                 </div>
-              </li>
-            </ol>
+                <span className="conf-n">91%</span>
+              </div>
+              <div className="olv-actions">
+                <button type="button" className="olv-pop">
+                  Advance candidate
+                </button>
+                <button type="button" className="olv-float">
+                  Dismiss
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 
         <section className="olv-section tight" id="walkthrough">
           <div className="wrap">
             <p className="olv-kicker reveal">Walkthrough</p>
-            <h2 className="olv-body-h2 reveal">See the advisor in the product.</h2>
+            <h2 className="olv-body-h2 reveal">See it on a process like yours.</h2>
             <div className="hero-video-frame reveal" style={{ marginTop: 32 }}>
               <iframe
                 src="https://drive.google.com/file/d/1TwQzwMjdsJ8zWUOWZq10Gv9sRknfmTPi/preview"
