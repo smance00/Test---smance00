@@ -109,10 +109,13 @@ html:has(.olv) body {
     linear-gradient(160deg, #4a1d6a 0%, var(--plum) 55%, var(--plum-deep) 100%);
   color: #fff;
 }
+.olv-open .wrap.olv-open-grid {
+  max-width: 1240px;
+}
 .olv-open-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-  gap: clamp(28px, 5vw, 56px);
+  grid-template-columns: minmax(0, 1fr) minmax(480px, 600px);
+  gap: clamp(24px, 4vw, 48px);
   align-items: center;
 }
 .olv-open-copy {
@@ -121,15 +124,16 @@ html:has(.olv) body {
 }
 .olv-open-stage {
   position: relative;
-  min-height: 560px;
-  padding: 36px 0 0;
+  min-height: 540px;
+  padding: 56px 0 0;
 }
 .olv-open-human {
   position: absolute;
-  left: -12%;
-  right: -6%;
-  bottom: -8%;
-  height: 124%;
+  left: 200px;
+  right: auto;
+  bottom: -28px;
+  width: 380px;
+  height: 540px;
   margin: 0;
   pointer-events: none;
   z-index: 1;
@@ -140,9 +144,9 @@ html:has(.olv) body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: 62% bottom;
+  object-position: center bottom;
   transform: scaleX(-1);
-  transform-origin: 58% bottom;
+  transform-origin: center bottom;
   filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.28));
 }
 .olv-orb {
@@ -180,12 +184,12 @@ html:has(.olv) body {
   }
 }
 .olv-orb.brand {
-  left: auto;
-  right: 26%;
-  top: 4%;
+  left: 248px;
+  right: auto;
+  top: 12px;
   z-index: 3;
-  width: min(26vw, 132px);
-  height: min(26vw, 132px);
+  width: 128px;
+  height: 128px;
   display: grid;
   place-items: center;
   background:
@@ -665,8 +669,8 @@ html:has(.olv) body {
 .olv-open .demo-form.olv-hero-form {
   position: relative;
   z-index: 2;
-  width: min(100%, 380px);
-  max-width: 380px;
+  width: min(100%, 320px);
+  max-width: 320px;
   margin-top: 0;
   padding: 22px 22px 18px;
   background: #fff;
@@ -805,15 +809,13 @@ html:has(.olv) body {
   }
   .olv-open-stage {
     min-height: 500px;
-    padding-top: 28px;
+    padding-top: 40px;
   }
   .olv-open-human {
-    left: 8%;
-    right: -10%;
-  }
-  .olv-open-human img {
-    object-position: 70% bottom;
-    opacity: 0.96;
+    left: 42%;
+    width: min(320px, 58vw);
+    height: 460px;
+    bottom: -16px;
   }
   .olv-orb.brand {
     left: auto;
