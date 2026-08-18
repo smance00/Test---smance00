@@ -112,7 +112,7 @@ html:has(.olv) body {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.18fr);
   gap: clamp(40px, 7vw, 88px);
-  align-items: end;
+  align-items: start;
   max-width: 1200px;
 }
 .olv-open-copy {

@@ -51,9 +51,7 @@ export default function HomePage() {
                   Strengthen team alignment
                 </li>
               </ul>
-              <Link className="olv-textlink reveal" href="#request-demo">
-                Request a demo
-              </Link>
+              <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
             </div>
             <figure className="olv-halo reveal">
               <img
@@ -204,7 +202,7 @@ export default function HomePage() {
               Thirty minutes with a person. We walk a hiring process like yours and leave the decision with you — the same rule as the opening.
             </p>
             <div className="reveal">
-              <DemoRequestForm id="hero-request-demo" />
+              <DemoRequestForm id="close-request-demo" />
             </div>
           </div>
         </section>
