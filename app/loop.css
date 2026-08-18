@@ -1,6 +1,6 @@
 html:has(.olv),
 html:has(.olv) body {
-  background: #ffffff;
+  background: #f3f1ec;
   color: #14141c;
 }
 
@@ -11,11 +11,12 @@ html:has(.olv) body {
   --lime: #c7d40a;
   --ink: #14141c;
   --muted: #5b6478;
-  --line: #ece8f2;
+  --line: #e6e1d8;
+  --paper: #f3f1ec;
   --gutter: clamp(20px, 4vw, 48px);
   --maxw: 1120px;
   min-height: 100dvh;
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
   font-family: "Inter", system-ui, sans-serif;
   font-size: 17px;
@@ -35,8 +36,8 @@ html:has(.olv) body {
 .olv h4 {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
   font-weight: 600;
 }
 .olv p {
@@ -66,8 +67,8 @@ html:has(.olv) body {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px var(--gutter);
-  background: rgba(255, 255, 255, 0.9);
+  padding: 14px var(--gutter);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
 }
@@ -87,10 +88,11 @@ html:has(.olv) body {
   background: #e8fb2e;
   color: #14141c !important;
   border-radius: 999px;
-  padding: 8px 14px;
+  padding: 10px 16px;
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .olv-open {
@@ -224,7 +226,7 @@ html:has(.olv) body {
   z-index: 2;
 }
 .olv-open .olv-title b {
-  font-size: clamp(52px, 8vw, 96px);
+  font-size: clamp(36px, 5.4vw, 64px);
 }
 .olv-kicker {
   font-size: 12px;
@@ -262,24 +264,26 @@ html:has(.olv) body {
 }
 .olv-title b {
   font-family: "Poppins", sans-serif;
-  font-size: clamp(64px, 12vw, 128px);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  line-height: 0.88;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
 }
 .olv-title i {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: clamp(32px, 5.4vw, 56px);
-  letter-spacing: -0.035em;
-  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(24px, 3.6vw, 36px);
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 8px;
 }
 .olv-lede {
-  max-width: 42ch;
-  margin-top: 28px;
-  font-size: clamp(18px, 2vw, 22px);
-  color: rgba(255, 255, 255, 0.78);
+  max-width: 38ch;
+  margin-top: 22px;
+  font-size: clamp(16px, 1.7vw, 18px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
 }
 .olv-points {
   display: flex;
@@ -297,8 +301,8 @@ html:has(.olv) body {
   background: rgba(255, 255, 255, 0.94);
   color: var(--plum);
   border-radius: 999px;
-  padding: 8px 16px 8px 8px;
-  font-size: 15px;
+  padding: 7px 14px 7px 7px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
@@ -354,17 +358,18 @@ html:has(.olv) body {
 }
 .olv-pillar {
   display: block;
-  min-height: 280px;
-  padding: 28px 24px;
+  min-height: 260px;
+  padding: 24px 22px;
   border: 1px solid var(--line);
-  border-radius: 28px;
-  background: #faf8fc;
-  transition: background 0.2s, transform 0.2s, border-color 0.2s;
+  border-radius: 16px;
+  background: #fff;
+  transition: background 0.2s, transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 .olv-pillar:hover {
   background: #fff;
-  border-color: color-mix(in srgb, var(--violet) 35%, var(--line));
-  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--plum) 28%, var(--line));
+  box-shadow: 0 16px 36px -24px rgba(59, 24, 88, 0.35);
+  transform: translateY(-3px);
 }
 .olv-pillar span {
   font-family: "Poppins", sans-serif;
@@ -701,8 +706,8 @@ html:has(.olv) body {
   max-width: 420px;
   margin-top: 32px;
   padding: 28px;
-  border-radius: 24px;
-  background: #faf8fc;
+  border-radius: 16px;
+  background: #fff;
   border: 1px solid var(--line);
   color: #14141c;
 }
