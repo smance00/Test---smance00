@@ -29,7 +29,7 @@ export default function HomePage() {
       <LoopChrome />
       <main>
         <section className="olv-open">
-          <div className="wrap olv-open-grid">
+          <div className="wrap">
             <div className="olv-open-copy">
               <p className="olv-kicker reveal">Olevy</p>
               <h1 className="olv-title reveal">
@@ -55,16 +55,16 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="olv-open-stage">
+              <div className="olv-open-card">
+                <HeroOrbs />
+                <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
+              </div>
               <figure className="olv-open-human">
                 <img
                   src="/brand/human-in-the-loop.png"
                   alt="A hiring leader considering a recommendation — the human who stays in the loop."
                 />
               </figure>
-              <div className="olv-open-card">
-                <HeroOrbs />
-                <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
-              </div>
             </div>
           </div>
         </section>
