@@ -1,6 +1,6 @@
 html:has(.olv),
 html:has(.olv) body {
-  background: #ffffff;
+  background: #f6f3ee;
   color: #14141c;
 }
 
@@ -12,10 +12,11 @@ html:has(.olv) body {
   --ink: #14141c;
   --muted: #5b6478;
   --line: #ece8f2;
+  --paper: #f6f3ee;
   --gutter: clamp(20px, 4vw, 48px);
   --maxw: 1120px;
   min-height: 100dvh;
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
   font-family: "Inter", system-ui, sans-serif;
   font-size: 17px;
@@ -67,7 +68,7 @@ html:has(.olv) body {
   justify-content: space-between;
   gap: 20px;
   padding: 18px var(--gutter);
-  background: rgba(255, 255, 255, 0.9);
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
 }
