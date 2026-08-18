@@ -327,6 +327,12 @@ html:has(.olv) body {
 .olv-body.edh {
   --bg: #fafafc;
 }
+.olv-body .hero-copy h2 {
+  margin-top: 14px;
+  font-size: clamp(32px, 3.6vw, 48px);
+  max-width: 16ch;
+  letter-spacing: -0.035em;
+}
 
 .olv-section {
   padding: clamp(72px, 10vw, 128px) 0;
