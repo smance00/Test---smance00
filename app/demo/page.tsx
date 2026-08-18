@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 
 export default function DemoPage() {
   return (
-    <div className="olv">
+    <div className="edh">
       <EditorialFx />
       <LoopChrome />
-      <main className="olv-page">
-        <div className="wrap">
-          <p className="olv-kicker reveal">Request a demo</p>
+      <main className="edh-page">
+        <div className="container">
+          <p className="eyebrow reveal">Request a demo</p>
           <h1 className="reveal">See it on a process like yours.</h1>
-          <p className="olv-prose reveal">
+          <p className="prose reveal">
             Thirty minutes with a person — not a recording. We walk a hiring process like yours and leave the decision with you.
           </p>
           <div className="reveal">
