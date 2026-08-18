@@ -2,23 +2,19 @@
 
 import { useState } from "react";
 
-const ORBS = ["a", "b", "c"] as const;
-
 export function HeroOrbs() {
-  const [popped, setPopped] = useState<Record<string, boolean>>({});
+  const [popped, setPopped] = useState(false);
 
   return (
-    <div className="olv-open-art">
-      {ORBS.map((id) => (
-        <button
-          key={id}
-          type="button"
-          className={`olv-orb ${id} ${popped[id] ? "popped" : ""}`}
-          aria-label={popped[id] ? "Restore recommendation" : "Act on recommendation"}
-          aria-pressed={Boolean(popped[id])}
-          onClick={() => setPopped((current) => ({ ...current, [id]: !current[id] }))}
-        />
-      ))}
-    </div>
+    <button
+      type="button"
+      className={`olv-orb brand ${popped ? "popped" : ""}`}
+      aria-label={popped ? "Restore recommendation" : "Pop the recommendation"}
+      aria-pressed={popped}
+      onClick={() => setPopped((current) => !current)}
+    >
+      <span className="olv-orb-sheen" aria-hidden="true" />
+      <img src="/brand/olevy-mark.png" alt="" className="olv-orb-logo" />
+    </button>
   );
 }

@@ -29,36 +29,41 @@ export default function HomePage() {
       <LoopChrome />
       <main>
         <section className="olv-open">
-          <figure className="olv-open-human">
-            <img
-              src="/brand/human-in-the-loop.png"
-              alt="A hiring leader considering a recommendation — the human who stays in the loop."
-            />
-          </figure>
-          <HeroOrbs />
-          <div className="wrap">
-            <p className="olv-kicker reveal">Olevy</p>
-            <h1 className="olv-title reveal">
-              <b>Human</b>
-              <i>in the Loop</i>
-            </h1>
-            <p className="olv-lede reveal">
-              Olevy helps hiring teams make better decisions by turning hiring data into clear insights, spotting risk, and guiding managers in the moment.
-            </p>
-            <ul className="olv-points reveal">
-              <li>
-                <CheckIcon />
-                Improve decision quality
-              </li>
-              <li>
-                <CheckIcon />
-                Find hidden funnel friction
-              </li>
-              <li>
-                <CheckIcon />
-                Strengthen team alignment
-              </li>
-            </ul>
+          <div className="wrap olv-open-grid">
+            <div className="olv-open-copy">
+              <p className="olv-kicker reveal">Olevy</p>
+              <h1 className="olv-title reveal">
+                <b>Human</b>
+                <i>in the Loop</i>
+              </h1>
+              <p className="olv-lede reveal">
+                Olevy helps hiring teams make better decisions by turning hiring data into clear insights, spotting risk, and guiding managers in the moment.
+              </p>
+              <ul className="olv-points reveal">
+                <li>
+                  <CheckIcon />
+                  Improve decision quality
+                </li>
+                <li>
+                  <CheckIcon />
+                  Find hidden funnel friction
+                </li>
+                <li>
+                  <CheckIcon />
+                  Strengthen team alignment
+                </li>
+              </ul>
+            </div>
+            <div className="olv-open-stage">
+              <figure className="olv-open-human">
+                <img
+                  src="/brand/human-in-the-loop.png"
+                  alt="A hiring leader considering a recommendation — the human who stays in the loop."
+                />
+              </figure>
+              <HeroOrbs />
+              <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
+            </div>
           </div>
         </section>
 
