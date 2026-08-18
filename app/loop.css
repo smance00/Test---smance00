@@ -99,8 +99,10 @@ html:has(.olv) body {
   position: relative;
   overflow: hidden;
   padding: clamp(36px, 5vw, 64px) 0 clamp(48px, 6vw, 72px);
-  background: var(--paper);
-  color: var(--ink);
+  background:
+    radial-gradient(circle at 78% 18%, rgba(232, 176, 255, 0.18), transparent 32%),
+    linear-gradient(160deg, #4a1d6a 0%, var(--plum) 52%, var(--plum-deep) 100%);
+  color: #fff;
 }
 .olv-band {
   background:
@@ -270,17 +272,22 @@ html:has(.olv) body {
   position: relative;
   z-index: 2;
 }
+.olv-open .olv-kicker {
+  color: #e8fb2e;
+}
 .olv-open .olv-title b {
   font-size: clamp(32px, 4.4vw, 52px);
-  color: var(--ink);
+  color: #fff;
 }
 .olv-open .olv-title i {
   font-size: clamp(20px, 2.6vw, 30px);
+  color: rgba(255, 255, 255, 0.78);
 }
 .olv-open .olv-lede {
   max-width: 40ch;
   margin-top: 20px;
   font-size: clamp(16px, 1.6vw, 18px);
+  color: rgba(255, 255, 255, 0.72);
 }
 .olv-open .olv-points {
   margin-top: 24px;
@@ -830,9 +837,9 @@ html:has(.olv) body {
   margin-top: 0;
   padding: 22px 20px 16px;
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid transparent;
   border-radius: 16px;
-  box-shadow: none;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
 .olv-open .olv-hero-form h3 {
   font-size: 22px;
