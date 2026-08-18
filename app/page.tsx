@@ -1,7 +1,6 @@
 import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { AskLevy } from "@/components/AskLevy";
-import { HeroOrbs } from "@/components/HeroOrbs";
 import { LoopChrome } from "@/components/LoopChrome";
 import { LoopFooter } from "@/components/LoopFooter";
 import Link from "next/link";
@@ -52,19 +51,14 @@ export default function HomePage() {
                   Strengthen team alignment
                 </li>
               </ul>
+              <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
             </div>
-            <div className="olv-open-stage">
-              <div className="olv-open-card">
-                <HeroOrbs />
-                <DemoRequestForm id="hero-request-demo" className="olv-hero-form vis" />
-              </div>
-              <figure className="olv-open-human">
-                <img
-                  src="/brand/human-in-the-loop.png"
-                  alt="A hiring leader considering a recommendation — the human who stays in the loop."
-                />
-              </figure>
-            </div>
+            <figure className="olv-halo reveal">
+              <img
+                src="/brand/halo-leader.png"
+                alt="A hiring leader — the person who still makes the call."
+              />
+            </figure>
           </div>
         </section>
 
@@ -158,27 +152,33 @@ export default function HomePage() {
               <p className="olv-prose reveal" style={{ marginTop: 18 }}>
                 The model can flag a candidate, a Friday pattern, or a manager’s drift. Advance, dismiss, or coach — the hiring manager stays in control.
               </p>
-            </div>
-            <div className="olv-signal reveal">
-              <div className="il">Data insight</div>
-              <p className="ib">
-                Over the last 24 months, candidates from non-traditional backgrounds on your team have shown <b>40% higher retention</b> with equal output. Consider advancing Candidate X for a technical screening loop.
-              </p>
-              <div className="conf">
-                <div className="conf-t">
-                  <div className="conf-b" />
+              <div className="olv-signal reveal" style={{ marginTop: 28 }}>
+                <div className="il">Data insight</div>
+                <p className="ib">
+                  Over the last 24 months, candidates from non-traditional backgrounds on your team have shown <b>40% higher retention</b> with equal output. Consider advancing Candidate X for a technical screening loop.
+                </p>
+                <div className="conf">
+                  <div className="conf-t">
+                    <div className="conf-b" />
+                  </div>
+                  <span className="conf-n">91%</span>
                 </div>
-                <span className="conf-n">91%</span>
-              </div>
-              <div className="olv-actions">
-                <button type="button" className="olv-pop">
-                  Advance candidate
-                </button>
-                <button type="button" className="olv-float">
-                  Dismiss
-                </button>
+                <div className="olv-actions">
+                  <button type="button" className="olv-pop">
+                    Advance candidate
+                  </button>
+                  <button type="button" className="olv-float">
+                    Dismiss
+                  </button>
+                </div>
               </div>
             </div>
+            <figure className="olv-halo reveal">
+              <img
+                src="/brand/halo-advisor.png"
+                alt="A hiring manager receiving a recommendation — then deciding."
+              />
+            </figure>
           </div>
         </section>
 
@@ -202,6 +202,12 @@ export default function HomePage() {
             <p className="olv-prose reveal" style={{ marginTop: 18 }}>
               No migration. No cold start. The same systems named in the product card above.
             </p>
+            <figure className="olv-halo olv-halo-wide reveal">
+              <img
+                src="/brand/halo-collab.png"
+                alt="A hiring team reviewing the process they already run."
+              />
+            </figure>
             <div className="olv-systems reveal">
               <span>Greenhouse</span>
               <span>Lever</span>
@@ -213,17 +219,23 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="olv-section olv-band" id="request-demo">
+        <section className="olv-section" id="request-demo">
           <div className="wrap olv-split">
+            <figure className="olv-halo reveal">
+              <img
+                src="/brand/halo-team.png"
+                alt="The people who stay in the loop — a hiring team that still makes the call."
+              />
+            </figure>
             <div>
               <p className="olv-kicker reveal">Request a demo</p>
               <h2 className="olv-body-h2 reveal">See it on a process like yours.</h2>
               <p className="olv-prose reveal" style={{ marginTop: 18 }}>
-                Thirty minutes with a person. We walk a hiring process like yours and leave the decision with you — the same rule as the hero.
+                Thirty minutes with a person. We walk a hiring process like yours and leave the decision with you — the same rule as the opening.
               </p>
-            </div>
-            <div className="reveal">
-              <DemoRequestForm />
+              <div className="reveal">
+                <DemoRequestForm />
+              </div>
             </div>
           </div>
         </section>
