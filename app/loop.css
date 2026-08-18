@@ -109,10 +109,39 @@ html:has(.olv) body {
     linear-gradient(160deg, #4a1d6a 0%, var(--plum) 55%, var(--plum-deep) 100%);
   color: #fff;
 }
+.olv-open-human {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.olv-open-human img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: min(78%, 980px);
+  object-fit: cover;
+  object-position: right center;
+}
+.olv-open-human::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--plum-deep) 0%,
+    rgba(42, 16, 64, 0.82) 28%,
+    rgba(42, 16, 64, 0.28) 46%,
+    transparent 62%
+  );
+}
 .olv-open-art {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 1;
 }
 .olv-orb {
   position: absolute;
@@ -149,10 +178,10 @@ html:has(.olv) body {
   }
 }
 .olv-orb.a {
-  width: min(42vw, 420px);
-  height: min(42vw, 420px);
-  right: 8%;
-  top: 12%;
+  width: min(18vw, 160px);
+  height: min(18vw, 160px);
+  right: 42%;
+  top: 14%;
   background:
     radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.75), transparent 26%),
     radial-gradient(circle at 70% 68%, rgba(196, 160, 255, 0.5), transparent 44%),
@@ -162,20 +191,21 @@ html:has(.olv) body {
   animation: olvFloat 7s ease-in-out infinite;
 }
 .olv-orb.b {
-  width: 140px;
-  height: 140px;
-  right: 28%;
-  top: 8%;
+  width: 110px;
+  height: 110px;
+  right: 26%;
+  top: 6%;
   background:
     radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.7), transparent 28%),
     rgba(181, 156, 255, 0.28);
   animation: olvFloat 6s ease-in-out infinite -2s;
 }
 .olv-orb.c {
-  width: 88px;
-  height: 88px;
-  right: 14%;
-  top: 58%;
+  width: 72px;
+  height: 72px;
+  right: 8%;
+  bottom: 12%;
+  top: auto;
   background:
     radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.65), transparent 28%),
     rgba(232, 251, 46, 0.2);
@@ -183,7 +213,11 @@ html:has(.olv) body {
 }
 .olv-open .wrap {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  pointer-events: none;
+}
+.olv-open .wrap > * {
+  pointer-events: auto;
 }
 .olv-kicker {
   font-size: 12px;
@@ -739,6 +773,22 @@ html:has(.olv) body {
 }
 
 @media (max-width: 800px) {
+  .olv-open-human img {
+    width: 100%;
+    object-position: 78% center;
+  }
+  .olv-open-human::after {
+    background: linear-gradient(
+      180deg,
+      rgba(42, 16, 64, 0.18) 0%,
+      rgba(42, 16, 64, 0.55) 48%,
+      var(--plum-deep) 92%
+    );
+  }
+  .olv-orb.a {
+    right: 8%;
+    top: 10%;
+  }
   .olv-nav nav a:not(.olv-nav-cta) {
     display: none;
   }

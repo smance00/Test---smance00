@@ -29,6 +29,12 @@ export default function HomePage() {
       <LoopChrome />
       <main>
         <section className="olv-open">
+          <figure className="olv-open-human">
+            <img
+              src="/brand/human-in-the-loop.jpg"
+              alt="A hiring leader considering a recommendation — the human who stays in the loop."
+            />
+          </figure>
           <HeroOrbs />
           <div className="wrap">
             <p className="olv-kicker reveal">Olevy</p>
