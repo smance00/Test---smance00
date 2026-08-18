@@ -125,15 +125,20 @@ html:has(.olv) body {
 .olv-open-stage {
   position: relative;
   min-height: 540px;
-  padding: 56px 0 0;
+  padding: 64px 0 0;
+}
+.olv-open-card {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 320px);
 }
 .olv-open-human {
   position: absolute;
-  left: 200px;
+  left: 108px;
   right: auto;
-  bottom: -28px;
-  width: 380px;
-  height: 540px;
+  bottom: -12px;
+  width: 420px;
+  height: 560px;
   margin: 0;
   pointer-events: none;
   z-index: 1;
@@ -145,8 +150,8 @@ html:has(.olv) body {
   height: 100%;
   object-fit: contain;
   object-position: center bottom;
-  transform: scaleX(-1);
-  transform-origin: center bottom;
+  transform: scaleX(-1) rotate(6deg);
+  transform-origin: 40% bottom;
   filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.28));
 }
 .olv-orb {
@@ -183,13 +188,13 @@ html:has(.olv) body {
     transform: scale(1.4);
   }
 }
-.olv-orb.brand {
-  left: 248px;
-  right: auto;
-  top: 12px;
+.olv-open-card .olv-orb.brand {
+  left: auto;
+  right: -22px;
+  top: -36px;
   z-index: 3;
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
   display: grid;
   place-items: center;
   background:
@@ -812,15 +817,14 @@ html:has(.olv) body {
     padding-top: 40px;
   }
   .olv-open-human {
-    left: 42%;
-    width: min(320px, 58vw);
+    left: 28%;
+    width: min(340px, 64vw);
     height: 460px;
-    bottom: -16px;
+    bottom: -12px;
   }
-  .olv-orb.brand {
-    left: auto;
-    right: 18%;
-    top: 0;
+  .olv-open-card .olv-orb.brand {
+    right: -8px;
+    top: -28px;
   }
   .olv-nav nav a:not(.olv-nav-cta) {
     display: none;
