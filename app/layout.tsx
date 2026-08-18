@@ -18,9 +18,9 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Olevy — AI Hiring Advisor",
+  title: "Olevy — The operational intelligence layer for hiring",
   description:
-    "Olevy helps hiring teams make better decisions. It turns ATS and HRIS data into clear insight, spots risk, and guides managers in the moment — while a person still makes the call.",
+    "Olevy connects your existing ATS and HRIS to turn the hiring data you already have into predictive intelligence — spotting process bottlenecks, auditing bias, and coaching hiring managers in real time.",
   applicationName: "Olevy",
   manifest: "/manifest.json",
   icons: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#3b1858",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

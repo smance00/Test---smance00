@@ -7,4 +7,4 @@ export function isValidEmail(value: string) {
 }
 
 export const DEMO_MAIL =
-  "mailto:info@joinolevy.com?subject=Book%20a%20consultation%20with%20Olevy";
+  "mailto:info@joinolevy.com?subject=Book%20a%20demo%20with%20Olevy";
