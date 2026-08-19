@@ -137,7 +137,7 @@ export default function HomePage() {
                 <div className="erow-grid">
                   <div className="eg-copy">
                     <p>
-                      Olevy plugs into your existing ATS and enterprise systems and activates the data already sitting there — no migration, no cold start.
+                      Olevy surfaces patterns across interviews, manager behavior, and hiring outcomes so leaders can refine the process and make better decisions moving forward.
                     </p>
                     <div className="chips" style={{ marginTop: 18 }}>
                       <span className="chip">Interview scorecards</span>
