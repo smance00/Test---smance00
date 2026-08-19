@@ -107,7 +107,10 @@ export default function HomePage() {
                   hire.
                 </h1>
                 <p className="hero-sub prose reveal">
-                  The Olevy hiring intelligence platform helps talent teams turn hiring data into better decisions, revealing patterns, friction, and inconsistencies that shape quality of hire.
+                  Olevy is an AI hiring advisor that helps employers make better hiring decisions by connecting hiring behavior, interview signals, and workforce outcomes.
+                </p>
+                <p className="hero-sub prose reveal">
+                  Instead of adding another disconnected tool, Olevy connects to your ATS, HRIS, and related hiring data sources to uncover what leads to stronger hires, where risk is forming, and where the hiring process is slowing down.
                 </p>
                 <ul className="hero-points reveal">
                   <li>
