@@ -291,7 +291,10 @@ export default function HomePage() {
                   </WindowChrome>
                   <div className="eg-copy">
                     <p>
-                      Predictive feature-engineering models isolate hidden process bottlenecks and track manager scoring variation — built to streamline the recruitment lifecycle and spot interview fatigue before it costs you a great candidate.
+                      Olevy connects past hiring decisions to real outcomes like performance and retention. It learns which signals were actually tied to successful hires.
+                    </p>
+                    <p>
+                      Olevy then compares those patterns against candidates in your current pipeline. This helps teams make better-informed hiring decisions before the next offer is made.
                     </p>
                   </div>
                 </div>
