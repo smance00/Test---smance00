@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
-import { DEMO_MAIL } from "@/lib/utils";
 
 export function LoopChrome() {
   return (
@@ -10,8 +9,8 @@ export function LoopChrome() {
           <BrandMark height={22} />
         </Link>
         <div className="nav-right">
-          <a className="nav-demo" href={DEMO_MAIL}>
-            Book a demo
+          <a className="nav-demo" href="/#request-demo">
+            Request a demo
           </a>
         </div>
       </div>

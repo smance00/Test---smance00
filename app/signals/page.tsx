@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { EditorialFx } from "@/components/EditorialFx";
 import { LoopChrome } from "@/components/LoopChrome";
 import { LoopFooter } from "@/components/LoopFooter";
-import { DEMO_MAIL } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Signals — Olevy",
@@ -48,8 +47,8 @@ export default function SignalsPage() {
             </article>
           </div>
           <p className="reveal" style={{ marginTop: 48 }}>
-            <a className="nav-demo" href={DEMO_MAIL}>
-              Book a demo
+            <a className="nav-demo" href="/#request-demo">
+              Request a demo
             </a>
           </p>
         </div>

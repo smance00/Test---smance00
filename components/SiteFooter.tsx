@@ -33,18 +33,18 @@ export function SiteFooter({ variant = "home" }: { variant?: FooterVariant }) {
           </h4>
           <ul className={`mt-5 space-y-3 text-sm text-muted ${home ? "" : "mt-4"}`}>
             <li>
-              <a className="transition hover:text-fg" href="/#learn">
-                How it coaches
+              <a className="transition hover:text-fg" href="/#alignment">
+                Strengthen team alignment
               </a>
             </li>
             <li>
-              <a className="transition hover:text-fg" href="/#detect">
+              <a className="transition hover:text-fg" href="/#quality">
                 {home ? "How it works" : "How we help"}
               </a>
             </li>
             <li>
-              <a className="transition hover:text-fg" href={DEMO_MAIL}>
-                {home ? "Book a demo" : "Book a Consultation"}
+              <a className="transition hover:text-fg" href={home ? "/#request-demo" : DEMO_MAIL}>
+                {home ? "Request a demo" : "Book a Consultation"}
               </a>
             </li>
           </ul>
@@ -91,8 +91,8 @@ export function SiteFooter({ variant = "home" }: { variant?: FooterVariant }) {
                   </a>
                 </li>
                 <li>
-                  <a className="transition hover:text-fg" href="/#learn">
-                    Intelligence
+                  <a className="transition hover:text-fg" href="/#friction">
+                    Find the funnel friction
                   </a>
                 </li>
               </>
@@ -109,7 +109,7 @@ export function SiteFooter({ variant = "home" }: { variant?: FooterVariant }) {
                   </a>
                 </li>
                 <li>
-                  <a className="transition hover:text-fg" href="/#detect">
+                  <a className="transition hover:text-fg" href="/#quality">
                     The platform
                   </a>
                 </li>
