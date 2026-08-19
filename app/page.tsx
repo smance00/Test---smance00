@@ -1,12 +1,26 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
-import { CyclingWord } from "@/components/CyclingWord";
 import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
 import { SiteFooter } from "@/components/SiteFooter";
 import type { ReactNode } from "react";
+
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <circle cx="10" cy="10" r="10" fill="#7c5cff" />
+      <path
+        d="M6 10.2 8.6 12.8 14 7.4"
+        stroke="#fff"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 function ArrowIcon() {
   return (
@@ -85,27 +99,32 @@ export default function HomePage() {
           <section className="hero">
             <div className="container hero-split">
               <div className="hero-copy">
-                <p className="eyebrow reveal">Operational Intelligence Layer</p>
                 <h1 className="reveal">
-                  The intelligence layer for the hiring you{" "}
+                  Make your next hire, the{" "}
                   <span className="limeword" id="lime">
-                    already do
-                  </span>
-                  .
+                    right
+                  </span>{" "}
+                  hire.
                 </h1>
-                <p className="hero-line2 reveal">
-                  for teams that hire <CyclingWord />
-                </p>
                 <p className="hero-sub prose reveal">
-                  Olevy connects to the systems you already run — your ATS and enterprise data — and maps every pre-hire signal to what actually happened next. See where hiring slows, learn which signals predict great hires, and coach every manager with data, not opinions.
+                  The Olevy hiring intelligence platform helps talent teams turn hiring data into better decisions, revealing patterns, friction, and inconsistencies that shape quality of hire.
                 </p>
-                <div className="hero-cta reveal">
-                  <a className="textlink quiet" href="#quality">
-                    See how it works
-                  </a>
-                </div>
+                <ul className="hero-points reveal">
+                  <li>
+                    <CheckIcon />
+                    Improve decision quality
+                  </li>
+                  <li>
+                    <CheckIcon />
+                    Find hidden funnel friction
+                  </li>
+                  <li>
+                    <CheckIcon />
+                    Strengthen team alignment
+                  </li>
+                </ul>
               </div>
-              <DemoRequestForm id="request-demo" compact />
+              <DemoRequestForm id="request-demo" />
             </div>
           </section>
 
