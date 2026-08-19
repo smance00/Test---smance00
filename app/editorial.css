@@ -419,7 +419,7 @@
   transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .edh .fbar.am {
-  background: var(--amber);
+  background: var(--violet);
 }
 .edh .vis .fbar {
   transform: scaleX(var(--w));
@@ -710,7 +710,7 @@
   background: var(--violet-bg);
 }
 .edh .fat .bar.hot {
-  background: var(--amber);
+  background: var(--violet);
 }
 .edh .fat .d {
   font-size: 10.5px;
@@ -1074,7 +1074,7 @@
   background: var(--border);
 }
 .edh .mfill.am {
-  background: var(--amber);
+  background: var(--violet);
 }
 .edh .mock .mh-t {
   font-size: 13px;
@@ -1129,7 +1129,7 @@
   background: linear-gradient(180deg, var(--grad-b), var(--grad-a));
 }
 .edh .drift .dbar.hot {
-  background: var(--amber);
+  background: var(--violet);
 }
 .edh .drift .dq {
   font-size: 11px;
@@ -1140,7 +1140,7 @@
   font-size: 11.5px;
   font-weight: 500;
   color: var(--ink);
-  background: var(--amber-bg);
+  background: var(--violet-bg);
   border-radius: 8px;
   padding: 8px 11px;
 }
@@ -1181,8 +1181,8 @@
   color: var(--muted);
 }
 .edh .btag.am {
-  background: var(--amber-bg);
-  color: var(--amber);
+  background: var(--violet-bg);
+  color: var(--violet);
 }
 .edh .nudge {
   border: 1px solid var(--violet);
