@@ -121,14 +121,22 @@
   color: var(--ink);
 }
 .edh .nav-demo {
-  color: var(--ink);
-  font-size: 15px;
-  font-weight: 500;
-  border-bottom: 1.5px solid var(--violet);
-  padding-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(92deg, var(--grad-a), var(--grad-b));
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border: 0;
+  border-radius: 999px;
+  padding: 9px 18px;
+  line-height: 1.2;
 }
 .edh .nav-demo:hover {
-  color: var(--violet);
+  color: #fff;
+  filter: brightness(1.06);
 }
 .edh .signin {
   color: var(--muted);
@@ -170,6 +178,15 @@
 
 .edh .hero {
   padding: clamp(54px, 8vw, 104px) 0 clamp(40px, 5vw, 64px);
+}
+.edh .hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 380px);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.edh .hero-copy h1 {
+  max-width: 16ch;
 }
 .edh .eyebrow {
   font-size: 12.5px;
@@ -1331,4 +1348,134 @@ html.dark:has(.edh) body {
   margin-top: 14px;
   max-width: 58ch;
   color: var(--muted);
+}
+
+.edh .drops {
+  padding-top: 0;
+}
+.edh .drop {
+  border-top: 1px solid var(--border);
+}
+.edh .drop:last-of-type {
+  border-bottom: 1px solid var(--border);
+}
+.edh .drop summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: clamp(22px, 3vw, 32px) 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: "Poppins", "Inter Tight", "Inter", sans-serif;
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.edh .drop summary::-webkit-details-marker {
+  display: none;
+}
+.edh .drop summary svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+.edh .drop[open] summary svg {
+  transform: rotate(180deg);
+}
+.edh .drop-body {
+  padding-bottom: clamp(28px, 4vw, 48px);
+}
+.edh .drop .erow-grid {
+  border: 0;
+  padding: 0;
+}
+.edh .drop .sec-intro {
+  margin-top: 0;
+}
+.edh .drop .sec-intro + .sec-intro {
+  margin-top: 16px;
+}
+
+.edh .demo-form {
+  width: min(100%, 380px);
+  padding: 22px 20px 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+.edh .demo-form h3 {
+  font-size: 22px;
+}
+.edh .demo-form-lead,
+.edh .demo-legal,
+.edh .demo-error {
+  color: var(--muted);
+  font-size: 14px;
+}
+.edh .demo-form-lead {
+  margin: 6px 0 16px;
+}
+.edh .demo-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.edh .demo-form label i {
+  color: #e11d48;
+  font-style: normal;
+}
+.edh .demo-form input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+  background: var(--bg);
+  color: var(--ink);
+}
+.edh .demo-form .demo-row {
+  display: contents;
+}
+.edh .demo-form.compact .demo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.edh .demo-submit {
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px;
+  background: linear-gradient(92deg, var(--grad-a), var(--grad-b));
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.edh .demo-legal {
+  margin-top: 12px;
+  font-size: 12px;
+}
+.edh .demo-legal a {
+  text-decoration: underline;
+}
+.edh .final .nav-demo {
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .edh .hero-split {
+    grid-template-columns: 1fr;
+  }
+  .edh .erow-grid.flip-mobile .eg-copy {
+    order: -1;
+  }
 }

@@ -6,9 +6,11 @@ import { isValidEmail } from "@/lib/utils";
 export function DemoRequestForm({
   className = "",
   id = "request-demo",
+  compact = false,
 }: {
   className?: string;
   id?: string;
+  compact?: boolean;
 }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -39,7 +41,7 @@ export function DemoRequestForm({
 
   if (sent) {
     return (
-      <div className={`demo-form reveal vis ${className}`.trim()}>
+      <div className={`demo-form reveal vis ${compact ? "compact" : ""} ${className}`.trim()}>
         <h3>We&apos;ll be in touch.</h3>
         <p className="demo-form-lead">
           Your request is ready to send. If your mail app didn&apos;t open, email{" "}
@@ -50,38 +52,44 @@ export function DemoRequestForm({
   }
 
   return (
-    <form className={`demo-form reveal ${className}`.trim()} onSubmit={onSubmit} id={id}>
-      <h3>Request a demo</h3>
-      <p className="demo-form-lead">30 minutes with a person. We walk a process like yours.</p>
+    <form className={`demo-form reveal ${compact ? "compact" : ""} ${className}`.trim()} onSubmit={onSubmit} id={id}>
+      {compact ? null : (
+        <>
+          <h3>Request a demo</h3>
+          <p className="demo-form-lead">30 minutes with a person. We walk a process like yours.</p>
+        </>
+      )}
+      <div className="demo-row">
+        <label>
+          <span>
+            <i aria-hidden="true">*</i> First name
+          </span>
+          <input
+            type="text"
+            name="firstName"
+            autoComplete="given-name"
+            required
+            value={firstName}
+            onChange={(event) => setFirstName(event.target.value)}
+          />
+        </label>
+        <label>
+          <span>
+            <i aria-hidden="true">*</i> Last name
+          </span>
+          <input
+            type="text"
+            name="lastName"
+            autoComplete="family-name"
+            required
+            value={lastName}
+            onChange={(event) => setLastName(event.target.value)}
+          />
+        </label>
+      </div>
       <label>
         <span>
-          <i aria-hidden="true">*</i> First name
-        </span>
-        <input
-          type="text"
-          name="firstName"
-          autoComplete="given-name"
-          required
-          value={firstName}
-          onChange={(event) => setFirstName(event.target.value)}
-        />
-      </label>
-      <label>
-        <span>
-          <i aria-hidden="true">*</i> Last name
-        </span>
-        <input
-          type="text"
-          name="lastName"
-          autoComplete="family-name"
-          required
-          value={lastName}
-          onChange={(event) => setLastName(event.target.value)}
-        />
-      </label>
-      <label>
-        <span>
-          <i aria-hidden="true">*</i> Work email
+          <i aria-hidden="true">*</i> {compact ? "Email" : "Work email"}
         </span>
         <input
           type="email"
@@ -94,12 +102,14 @@ export function DemoRequestForm({
       </label>
       {error ? <p className="demo-error">{error}</p> : null}
       <button type="submit" className="demo-submit">
-        Request a demo
+        {compact ? "Request" : "Request a demo"}
       </button>
-      <p className="demo-legal">
-        By submitting your information, you agree to Olevy&apos;s{" "}
-        <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. You can opt out anytime.
-      </p>
+      {compact ? null : (
+        <p className="demo-legal">
+          By submitting your information, you agree to Olevy&apos;s{" "}
+          <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. You can opt out anytime.
+        </p>
+      )}
     </form>
   );
 }
