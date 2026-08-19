@@ -4,7 +4,7 @@ import { DemoRequestForm } from "@/components/DemoRequestForm";
 import { EditorialFx } from "@/components/EditorialFx";
 import { EditorialThemeToggle } from "@/components/EditorialThemeToggle";
 import { IntelligenceExplorer } from "@/components/IntelligenceExplorer";
-import { SiteFooter } from "@/components/SiteFooter";
+import { LoopFooter } from "@/components/LoopFooter";
 import type { ReactNode } from "react";
 
 function CheckIcon() {
@@ -308,21 +308,9 @@ export default function HomePage() {
               </DropSection>
             </div>
           </section>
-
-          <section className="final">
-            <div className="container">
-              <h2 className="reveal">See your hiring, clearly.</h2>
-              <p className="fsub reveal">
-                Book a walkthrough and we&apos;ll show you the intelligence hiding in your existing ATS.
-              </p>
-              <a className="nav-demo reveal" href="#request-demo">
-                Request a demo
-              </a>
-            </div>
-          </section>
         </main>
+        <LoopFooter />
       </div>
-      <SiteFooter variant="home" />
     </div>
   );
 }
