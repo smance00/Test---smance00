@@ -252,6 +252,9 @@
   max-width: 60ch;
   line-height: 1.62;
 }
+.edh .hero-sub + .hero-sub {
+  margin-top: 16px;
+}
 .edh .hero-cta {
   display: flex;
   align-items: center;
