@@ -299,10 +299,10 @@ export default function HomePage() {
 
               <DropSection id="alignment" title="Strengthen team alignment">
                 <p className="sec-intro">
-                  Because Olevy runs on your existing ATS data, it cross-references your real hires — the ones already sourced and screened through your ATS and enterprise systems — and compares who actually succeeded against your future candidate profiles.
+                  Olevy brings together signals from recruiters, interviewers, and hiring managers so everyone can see where decisions match and where they don&apos;t.
                 </p>
                 <p className="sec-intro">
-                  Then it delivers real-time behavioral coaching widgets: non-punitive, data-backed guidance, directly to hiring managers.
+                  By connecting feedback, scoring, and hiring patterns, Olevy helps teams make more consistent decisions together.
                 </p>
                 <IntelligenceExplorer />
               </DropSection>
