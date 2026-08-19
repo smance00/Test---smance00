@@ -181,12 +181,12 @@
 }
 .edh .hero-split {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 380px);
-  gap: clamp(32px, 5vw, 72px);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 480px);
+  gap: clamp(36px, 6vw, 80px);
   align-items: center;
 }
 .edh .hero-copy h1 {
-  max-width: 16ch;
+  max-width: 12ch;
 }
 .edh .eyebrow {
   font-size: 12.5px;
@@ -258,6 +258,31 @@
   gap: 28px;
   margin-top: 32px;
   flex-wrap: wrap;
+}
+.edh .hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.edh .hero-points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 10px;
+  border-radius: 999px;
+  background: rgba(124, 92, 255, 0.1);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.edh .hero-points svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 .edh .textlink {
   display: inline-flex;
@@ -1402,29 +1427,33 @@ html.dark:has(.edh) body {
 }
 
 .edh .demo-form {
-  width: min(100%, 380px);
-  padding: 22px 20px 18px;
+  width: 100%;
+  max-width: 480px;
+  padding: 36px 32px 28px;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 20px;
   background: var(--surface);
+  box-shadow: 0 18px 48px rgba(20, 20, 28, 0.08);
 }
 .edh .demo-form h3 {
-  font-size: 22px;
+  font-size: clamp(28px, 2.4vw, 34px);
+  letter-spacing: -0.03em;
 }
 .edh .demo-form-lead,
 .edh .demo-legal,
 .edh .demo-error {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
 }
 .edh .demo-form-lead {
-  margin: 6px 0 16px;
+  margin: 10px 0 22px;
+  line-height: 1.5;
 }
 .edh .demo-form label {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .edh .demo-form label i {
   color: #e11d48;
@@ -1433,10 +1462,10 @@ html.dark:has(.edh) body {
 .edh .demo-form input {
   display: block;
   width: 100%;
-  margin-top: 6px;
+  margin-top: 8px;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 10px 12px;
+  border-radius: 12px;
+  padding: 14px 16px;
   font: inherit;
   background: var(--bg);
   color: var(--ink);
@@ -1452,17 +1481,19 @@ html.dark:has(.edh) body {
 .edh .demo-submit {
   width: 100%;
   border: 0;
-  border-radius: 999px;
-  padding: 12px;
+  border-radius: 14px;
+  padding: 16px;
   background: linear-gradient(92deg, var(--grad-a), var(--grad-b));
   color: #fff;
   font: inherit;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
 }
 .edh .demo-legal {
-  margin-top: 12px;
-  font-size: 12px;
+  margin-top: 14px;
+  font-size: 12.5px;
+  line-height: 1.5;
 }
 .edh .demo-legal a {
   text-decoration: underline;

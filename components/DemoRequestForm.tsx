@@ -53,43 +53,37 @@ export function DemoRequestForm({
 
   return (
     <form className={`demo-form reveal ${compact ? "compact" : ""} ${className}`.trim()} onSubmit={onSubmit} id={id}>
-      {compact ? null : (
-        <>
-          <h3>Request a demo</h3>
-          <p className="demo-form-lead">30 minutes with a person. We walk a process like yours.</p>
-        </>
-      )}
-      <div className="demo-row">
-        <label>
-          <span>
-            <i aria-hidden="true">*</i> First name
-          </span>
-          <input
-            type="text"
-            name="firstName"
-            autoComplete="given-name"
-            required
-            value={firstName}
-            onChange={(event) => setFirstName(event.target.value)}
-          />
-        </label>
-        <label>
-          <span>
-            <i aria-hidden="true">*</i> Last name
-          </span>
-          <input
-            type="text"
-            name="lastName"
-            autoComplete="family-name"
-            required
-            value={lastName}
-            onChange={(event) => setLastName(event.target.value)}
-          />
-        </label>
-      </div>
+      <h3>Request a demo</h3>
+      <p className="demo-form-lead">Schedule a 30-minute product demo with a real, live person.</p>
       <label>
         <span>
-          <i aria-hidden="true">*</i> {compact ? "Email" : "Work email"}
+          First name <i aria-hidden="true">*</i>
+        </span>
+        <input
+          type="text"
+          name="firstName"
+          autoComplete="given-name"
+          required
+          value={firstName}
+          onChange={(event) => setFirstName(event.target.value)}
+        />
+      </label>
+      <label>
+        <span>
+          Last name <i aria-hidden="true">*</i>
+        </span>
+        <input
+          type="text"
+          name="lastName"
+          autoComplete="family-name"
+          required
+          value={lastName}
+          onChange={(event) => setLastName(event.target.value)}
+        />
+      </label>
+      <label>
+        <span>
+          Email address <i aria-hidden="true">*</i>
         </span>
         <input
           type="email"
@@ -102,14 +96,12 @@ export function DemoRequestForm({
       </label>
       {error ? <p className="demo-error">{error}</p> : null}
       <button type="submit" className="demo-submit">
-        {compact ? "Request" : "Request a demo"}
+        Get started
       </button>
-      {compact ? null : (
-        <p className="demo-legal">
-          By submitting your information, you agree to Olevy&apos;s{" "}
-          <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. You can opt out anytime.
-        </p>
-      )}
+      <p className="demo-legal">
+        By submitting your information, you agree to Olevy&apos;s{" "}
+        <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. You can opt out anytime.
+      </p>
     </form>
   );
 }
